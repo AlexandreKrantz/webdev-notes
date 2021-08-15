@@ -87,7 +87,6 @@ Work consistently and not for too long at once. You don't want to sink entire da
 ## How Does the Web Work?
 
 ### How the Internet Works
-
 - A router is connected to multiple computers and allows them to communicate by directing messages to their intended recipient. You can connect multiple routers to create a larger network.
   - This is sufficient to create a local network.
 - The internet is a global network of computers. Routers around the world are connected using the telephone infastructure of cables.
@@ -99,8 +98,12 @@ Work consistently and not for too long at once. You don't want to sink entire da
   - The IP address indicates the location of your computer on the network. It is not linked to your computer's hardware in any way.
   - Your IP address is different each time you connect to the internet from a different place. If you restart your router, it is possible that your ISP assigns it a different IP. It refers to the location of the _connection_ to the network, not the hardware itself.
   - Domain names are just human readable aliases for IP addresses.
-- _Web servers_ are computers connected to the internet that send messages intelligible to web browsers. The web is a service built on top of the infastructure that is the internet.
+- _Web servers_ are computers connected to the internet that send data intelligible to web browsers. The web is a service built on top of the infastructure that is the internet.
   - Email is another example of a service built on top of the internet.
 - Intranets are private networks not connected to the internet. Extranets are private networks only partly open to the internet. They both use same infastructure and protocols as the internet.
 
-### How the Web Works
+### How Does a DNS Request Work?
+- Domain Name Servers are special servers that match up domain names to IP addresses and redirect client requests to the correct server.
+- If the IP address for a domain is saved in cache, your computer sends a request directly to the web server. Otherwise, it gets the IP address from a DNS and then sends a request to the web server.
+
+Really good vid: https://youtu.be/72snZctFFtA
