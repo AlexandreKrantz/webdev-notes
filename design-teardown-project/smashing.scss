@@ -1,0 +1,6 @@
+// you must declare your custom variables before the bootstrap import
+// this is because the default bootstrap variables are declared with !default
+
+
+// import bootstrap sass
+@import '../node_modules/bootstrap/scss/bootstrap';

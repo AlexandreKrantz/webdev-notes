@@ -31,3 +31,71 @@
 - The principle of proximity is about moving things closer or farther apart to achieve a more organized look. The principle says that related items should be grouped together so that they will be viewed as a group, rather than as several unrelated elements. Audiences will assume that items that are not near each other in a design are not closely related. Audiences will naturally tend to group similar items that are near to each other into a single unit. 
     - People should never have to “work” at trying to figure out which caption goes with which graphic or whether or not a line of text is a subtitle or a line of text unrelated to the title. Do not make audiences think.
     - we must be conscious of where our eye goes first when we step back and look at our design. When you look at your slide, notice where your eye is drawn first, second, and so on. What path does your eye take?
+## Fonts and Typography
+### [Working with Typography](https://learn.shayhowe.com/html-css/working-with-typography/)
+- Font = file that contains a typeface. The typeface artistic name for the actual look of the letters.
+- Choice of text typeface and color is most important for the legibililty and tone of the page. Use css `color` property to change the color of text.
+- The `font-family` property is used to declare which font—as well as which fallback or substitute fonts—should be used to display text. You list the names of the fonts in order of preference, separated by commas. At the end, you specify sans-serif or serif. You should write the font name in quotation marks to be safe.
+- The `font-size` property provides the ability to set the size of text using common length values, including pixels, em units, percentages, points, or `font-size` keywords.
+- `font-style` is used to make the font either italic or normal.
+- `font-weight` accepts either keyword values or numeric values. Keyword values include normal, bold, bolder, lighter, and inherit. Of these keyword values, it is recommended to primarily use normal and bold to change text from normal to bold and vice versa. Rather than using the keyword values bolder or lighter, it’s better to use a numeric values (100-900) for more specific control.
+    - Check if typeface comes in every weight. If it doesn't, then it will default to the weight that is closest to the value you input (e.g. jump to bold).
+- `font-variant` is used to make the font either small-caps or normal.
+- `line-height` is the distance between two lines of text. Accepts length values, including pixels, em units, percentages, etc. The best practice for legibility is to set the `line-height` to around one and a half times our font-size property value. This could be quickly accomplished by setting the line-height to 150%, or just 1.5.
+    - Can be used to vertically center a single line of text if you set `height` and `line-height` to the same value. Useful for buttons, etc.
+- `font` property is a shorthand that includes all the `font-*` properties.
+- The `text-align` property has five values: left, right, center, justify, and inherit. These align the text within an element, not the element itself.
+- `text-decoration` has values underline, overline, line-thoough, etc.
+- The `text-indent` property can be used to indent the first line of text within an element. Simply specify an indent length.
+- The `text-transform` property accepts five values: none, capitalize, uppercase, lowercase, and inherit. The capitalize value will capitalize the first letter of each word, the uppercase value will capitalize every letter, and the lowercase value will make every letter lowercase. Using none will return any of these inherited values back to the original text style.
+- `letter-spacing` adjusts space between letters.
+- `word-spacing` adjusts space between words.
+- To embed a web font, use `@font-face` and set its source to the url and font-family value to its name. Or, for Google fonts, just link their stylesheet in the html (it contains the @font-face declaration). Web fonts must always be reference with quotation marks in your css file.
+
+### [Serif vs. Sans-Serif](https://www.impactplus.com/blog/sans-serif-vs-serif-font-which-should-you-use-when)
+- Serif fonts say Traditional, Established, Confident, Elegant and Trustworthy.
+    - Main serif fonts: Georgia, Garamond, Times New Roman, Basekerville.
+- Sans-Serif say modern, youthful, approachable, clean, fun (and more legible). More relatable and human.
+    - Main ones are Helvetica, Open Sans, Proxima Nova, Arial
+- Stick to 1-3 fonts total for your brand. But choose fonts with a good amount of contrast. They should have at least one shared quality to stay consistent but be otherwise quite different (for example, same letter height or width or designer). You can make a visual hierarchy with different weights and sizes, different fonts is not always necessary.
+
+### Learning Outcomes
+- Why do fonts matter?
+- What’s the difference between a serif and sans-serif font?
+- What are `font-family` attributes used for?
+- How is the active font determined in a `font-family`?
+    - If multiple family names are used, the browser will select the first one it finds either embedded on the page using @font-face or installed on the user’s operating system.
+    - For font-family there is no specific default or initial value; the initial value always depends on the browser and/or operating system.
+- Where does the browser actually get its fonts from?
+- Where can you get additional fonts from and how do you get them onto your page?
+- What are the disadvantages of using web fonts? Of loading your own?
+    - Web fonts can be slow to load, but they provide a more custom look.
+- What are the important properties of fonts that you can specify using CSS?
+
+## Project: Design Teardown
+### [The Box Model](https://css-tricks.com/the-css-box-model/)
+- Recall that every element is a box (The Box Model). Margin isn't included in the size of a box, but affects other content interacting with the box. The height/width css property doesn't actually refer to the height/width of the entire box.
+    - Box width =  width + padding-left + padding-right + border-left + border-right
+    - Box height =  height + padding-top + padding-bottom + border-top + border-bottom
+- If padding or borders are undeclared, they are either zero (likely if you are using a css reset) or the browser default value (probably not zero especially on form elements that are commonly not reset).
+- The default width of a box with static/relative positioning is whatever is left of the current line.
+- The default width of a box with absolute positioning is the minimum width to fit the content inside.
+- Inline elements are boxes too. Think of them as really really long and skinny rectangles, that just so happen to wrap at every line. They are able to have margin, padding, borders just like any other box. However, line height overrides padding.  
+
+Wanna see every single “box” that makes up a page? Try putting this in the stylesheet temporarily:
+``` css
+* {
+   outline: 1px solid red !important;
+}
+```
+
+### [Box Sizing](https://css-tricks.com/box-sizing/)
+- `box-sizing` has three possible values (content-box, padding-box, and border-box), the most popular value is border-box.
+    - With `box-sizing: border-box;` we can change the box model so that the box height/width correspond to the value of the height/width property. Border and padding eat into this height/width but do not add to it.
+
+How to implement universal box sizing:
+``` css
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+```
