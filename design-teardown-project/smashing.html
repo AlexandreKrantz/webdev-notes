@@ -7,11 +7,86 @@
 
     <!-- Customized Bootstrap CSS -->
     <link rel="stylesheet" href="smashing.css">
+    <link rel="stylesheet" href="smashing2.css">
     <title>Hello, world!</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
-    <button type="button" class="btn btn-primary">Welcome</button>
+    <nav class="navbar navbar-expand-md bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img class="logo" src="./assets/logo.svg">
+        </a>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Articles</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Guides</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Books</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Workshops</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Memberships</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  More
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="#">Newsletter</a></li>
+                  <li><a class="dropdown-item" href="#">Podcast</a></li>
+                  <li><a class="dropdown-item" href="#">Job Board</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <button class="btn btn-secondary btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+          </button>
+          <form action="">
+            <input class="form-control me-2 nav-search" type="search" placeholder="Search" aria-label="Search">
+          </form>
+      </div>
+    </nav>
+    <div class="langs">
+      <a class="lang-btn">
+        CSS
+      </a>
+      <a class="lang-btn">
+        HTML
+      </a>
+      <a class="lang-btn">
+        JavaScript
+      </a>
+      <a class="lang-btn">
+        PHP
+      </a>
+    </div>
+    <div class="container-md px-4">
+      <div class="main-article row justify-content-start">
+        <div class="col-sm-3 article-img align-self-start">
+          <img src="./assets/index.avif" class="float-start">
+        </div>
+        
+        <div class="article-heading col-sm-9">
+          <p><a>Scott Himmer</a> wrote</p>
+          <h1>
+            Changing A Tire On A Moving Car (Or How To Improve Product Roadmaps)
+          </h1>
+          <p>Jan 7, 2022 in <a>Product strat</a>, <a>User Experience</a>, <a>Usability</a></p>
+        </div>
+        <div class="article-text col">
+          <p> Product roadmaps are often treated as a series of checkboxes. But they are more than that. In this article, Scott Himmer explains how internal partnerships, research, design systems, and regular touch bases can help make sure that your product roadmap is a successful one. </p>
+          <a>Continue Reading</a>
+        </div>
+      </div>
+    </div>
+
 
     <!-- Optional JavaScript; choose one of the two! -->
 

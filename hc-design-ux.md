@@ -73,7 +73,7 @@
 - What are the important properties of fonts that you can specify using CSS?
 
 ## Project: Design Teardown
-### [The Box Model](https://css-tricks.com/the-css-box-model/)
+### [The Box Model](https://css-tricks.com/the-css-box-model/) (default behavior = content-box)
 - Recall that every element is a box (The Box Model). Margin isn't included in the size of a box, but affects other content interacting with the box. The height/width css property doesn't actually refer to the height/width of the entire box.
     - Box width =  width + padding-left + padding-right + border-left + border-right
     - Box height =  height + padding-top + padding-bottom + border-top + border-bottom
@@ -99,3 +99,38 @@ How to implement universal box sizing:
   box-sizing: border-box;
 }
 ```
+
+### [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background)
+- "flex container" is the parent element to the "flex items" (usually a div element).
+    - You need to set `display: flex;` for this element. 
+    - You also set the flex-direction, to establish the direction of the main axis. It has four values (row default= left to right; column default = top to bottom): `flex-direction: row | row-reverse | column | column-reverse;` (default value: row).
+    - By default, flex items will all try to fit onto one line (nowrap). You can change that and allow the items to wrap as needed with this property. `flex-wrap: nowrap | wrap | wrap-reverse;` (note: wrap-reverse makes wraps the elements onto multiple lines from bottom to top, but the order of the element on a line still goes in the specified flex-direction).
+    - `flex-flow` is a shorthand for the flex-direction and flex-wrap properties. eg: ` flex-flow: column wrap;`
+    - justify-content defines how the flex-items are aligned along the main axis. `justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly | ...`
+    - align-items is like justify content but for aligning flex-items on the cross axis. `align-items: stretch | flex-start | flex-end | center | baseline`. `stretch` makes the items fill the cross axis (still respects min-width/max-width though).
+    - align-content aligns multiple rows of flex items (you can think of each row being a flex item along the cross axis; not that for multiple rows you need wrapping of the items). `  align-content: flex-start | flex-end | center | space-between | space-around | space-evenly | stretch | ...;`
+    - row-gap/column-gap is used to specify a minimum gap betwen flex items and rows (in lenght units). This gap can get bigger due to justify-content/align-items.
+- flex layout is based on "flex-flow" directions instead of inline and block.
+    - items are either laid out on (1) the "main axis" which goes from "main-start" to "main-end" OR on (2) the "cross axis", which goes from "cross-start" to "cross-end".
+- A flex item has a main size, which corresponds to its length along the main axis. It also has a cross size, which is its length in the cross axis dimension. 
+    - Override the order of the items in the html with `order: X`, where X is the index of the item (first item with index 0).
+    - flex-grow is set to 0 by default; if all items have `flex-grow: 1;` then they will all grow to take up the available space on the row; if one item has `flex-grow: 2;`, then it will grow twice as much as the others and take up twice as much space.
+    - flex-shrink is like flex grow but for elements to shrink.
+    - flex-basis specifies the items length on the main axis. The default value `auto` means "look at my width or height property". So it's better to just leave this alone and use the regular width and height properties.
+    - This is the shorthand for flex-grow, flex-shrink and flex-basis combined.
+    - align-self overrides the default alignment specified by align-items fo that specific flex-item. 
+
+
+
+
+### Bootstrap Notes (from bootstrap docs)
+- Bootstrap grid system is based on flexbox. You use `.row` or `.col` to specify the flex-direction, then you can put any element within it. To make a grid, you but `.col` divs within a `.row`.
+    - Rows should always be wrappers for columns when making a grid.
+    - Content should always go withing columns.
+    - 12 cols available by default in a row before wrapping.
+    - There are bootstrap classes for columns that provide the different flexbox properties like justify-content, wrapping, gutters etc.
+- container-sm, md, lg, etc affects max-width (before that, width = 100%).
+- col-sm, md, lg, etc affects at which point the width will stop being 100%. Eg: col-sm-8 will have width 100% for small screens and then width 8/12 afterwards.
+    - you can also combine different stuff, Eg: Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop with `col-6 col-md-4`.
+- Hierarchy: container -> row -> col -> content
+- 

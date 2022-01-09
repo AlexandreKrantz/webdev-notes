@@ -1,6 +1,91 @@
 // you must declare your custom variables before the bootstrap import
-// this is because the default bootstrap variables are declared with !default
+// this is because the default bootstrap variables are declared with !default. 
+// !default assigns a value to a variable only if that variable isn't defined or its value is null .
 
+$primary: #d33a2c;
+$secondary: #a92e23;
 
 // import bootstrap sass
 @import '../node_modules/bootstrap/scss/bootstrap';
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Libre+Baskerville&display=swap');
+
+.logo, img {
+    padding-top: 1em;
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+.navbar {
+    font-size: calc(1em + .1vw);
+    font-family: 'Fredoka One', cursive;
+    .nav-link {
+        color: #fff;
+        //white when hovering
+        &:hover {
+            color: #fff;
+        }
+        &:focus {
+            color: #fff;
+        }
+    }
+    
+    .nav-search {
+        border-radius: 10px;
+        border: 2px solid #d33a2c;
+        
+        transition: all .2s ease-in-out;
+        &:focus {
+            border-style: dotted;
+            border-color: #822018;
+            border-width: 2px;
+        
+        }
+    }
+
+    .btn{
+        border-radius: 10px;
+    }
+}
+
+.langs {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: 'Fredoka One', cursive;
+    .lang-btn {
+        text-decoration: none;
+        background-color: #ffe7e7;
+        color: #d33a2c;
+        border: 1px solid #ffe7e7;
+        border-radius: 10px;
+        padding: 0.5em 1em;
+        margin: .5em;
+        transition: all .2s ease-in-out;
+        &:hover {
+            border-style: solid;
+            border: 1px solid #d33a2c;
+            border-width: 1px;
+        }
+    }
+}
+
+.main-article {
+    .article-img {
+        img {
+            max-width: 200px;
+            max-height: 200px;
+            height: auto;
+            border-radius: 10px;
+            border: #d33a2c solid 2px;
+        }
+
+    }
+}
