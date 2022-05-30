@@ -17,4 +17,18 @@
     }
     ```
 
-    
+
+- Putting webpack in development mode will enable source maps. This way you can debug your code using Chrome DevTools and put breakpoints on the original src file.
+
+  Add this to your webpack config file:
+
+  ```
+  {
+    mode: "development"
+    // the rest of your webpack.config.js
+  }
+  ```
+
+  Or add this option to your webpack CLI command: `webpack -d --mode development`
+
+  
