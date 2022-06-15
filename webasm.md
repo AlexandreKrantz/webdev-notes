@@ -2,7 +2,7 @@
 - By itself, WebAssembly cannot currently directly access the DOM; it can only call JavaScript, passing in integer and floating point primitive data types. Thus, to access any Web API, WebAssembly needs to call out to JavaScript, which then makes the Web API call. 
 ## Using Emscripten
 - Emscripten generates an HTML file with the JS glue code. The JavaScript glue code is not as simple as you might imagine. For a start, Emscripten implements popular C/C++ libraries like SDL, OpenGL, etc. 
-  - The generated HTML document loads the JavaScript glue file and writes stdout to a <textarea>. If the application uses OpenGL, the HTML also contains a <canvas> element that is used as the rendering target. 
+  - The generated HTML document loads the JavaScript glue file and writes stdout to a `<textarea>`. If the application uses OpenGL, the HTML also contains a `<canvas>` element that is used as the rendering target. 
 - To use a custom HTML template:
 ```bash
 emcc -o hello2.html hello2.c -O3 --shell-file html_template/shell_minimal.html
