@@ -44,4 +44,48 @@
 - Access environment variables within node script: `process.env.VARNAME;"`. `process` does not need to be imported, it's automatically available.
 
 ### Building an HTTP Server
-[Fantastic article](https://www.digitalocean.com/community/tutorials/how-to-create-a-web-server-in-node-js-with-the-http-module)
+- [Fantastic article](https://www.digitalocean.com/community/tutorials/how-to-create-a-web-server-in-node-js-with-the-http-module)
+
+### File System
+- `const fs = require('fs');`
+- Pretty much any file operation that you can do with bash, you can do with fs. 
+- All fs methods are asynchronous by default, but you can make them synchronous by appending `Sync` to the method name.
+  - Using synchronous option will block the execution of the rest of your script while the operation completes. 
+- Node.js 10 includes experimental support for a promise based API: `const fs = require('fs/promises')`
+- Write file: `fs.writeFile('/Users/joe/test.txt', content);`, where content contains the string that you want to write. 
+- Read the full data of a file: `const data = await fs.readFile('/Users/joe/test.txt', { encoding: 'utf8' });`
+  - if a file is too big and reading it is affecting performance, you may want to try using fs streams. 
+
+
+### Intro to NPM
+- The difference between devDependencies and dependencies is that the former contains development tools, like a testing library, while the latter is bundled with the app in production.
+- Add to dependencies with `-S` flag, to dev dependencies with `-D` flag, and to optional dependencies with `-O` flag. 
+- update packages with `npm update`
+- Specify scripts in your package.json:
+```
+{
+  "scripts": {
+    "start-dev": "node lib/server-development",
+    "start": "node lib/server-production"
+  }
+}
+```  
+  - run the scripts with `npm run script-name`.
+- The Semantic Versioning concept is simple: all versions have 3 digits: `x.y.z` (corresponding to major version, minor version, patch version).
+  - you up the major version when you make incompatible API changes
+  - you up the minor version when you add functionality in a backward-compatible manner
+  - you up the patch version when you make backward-compatible bug fixes
+- To uninstall a package you have previously installed locally: `npm uninstall <package-name>`
+  - If the package is installed globally: `npm uninstall -g <package-name>`
+- `npm uninstall` by itself doesn't update the `package.json`. You need to pass a flag like `npm uninstall -D webpack` to update the dependencies. 
+- In your code you can only require *local* packages. So in general, all packages should be installed locally.
+- A package should be installed globally when it provides an executable command that you run from the shell (CLI), and it's reused across projects. Check your global packages by running `npm list -g --depth 0`
+
+### The URL Class
+- available globally. Create a new URL object with `const myURL = new URL('/foo', 'https://example.org/');`
+  - first argument is the input, which can be a relative or absolute url. If it is relative, then the second argument should contain the base url. 
+
+### Events
+- The events module - `require('events')` - provides the EventEmitter class. 
+  - `const emitter = new EventEmitter();`
+- `emitter.emit` emits an event. It synchronously calls every event listener in the order they were registered.
