@@ -1,0 +1,1 @@
+- Use the `--strictNullChecks` compiler option so that `null` and `undefined` become their own types and cannot be assigned to any variable. 

@@ -1,0 +1,99 @@
+{
+  "main": {
+    "id": "a4e92a20dbc3d46f",
+    "type": "split",
+    "children": [
+      {
+        "id": "6a440285bd9fe95a",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "typescript.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d560106f143080f7",
+    "type": "split",
+    "children": [
+      {
+        "id": "7e7957bf97f78b43",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fd99d2c72a6cab7c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "1b85c45dad61a2b8",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "35ed94d6973034d9",
+    "type": "split",
+    "children": [
+      {
+        "id": "aa579586aa212540",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a3558c48a1721e44",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "typescript.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "6a440285bd9fe95a",
+  "lastOpenFiles": [
+    "typescript.md",
+    "node-js/debugging-node.md",
+    "node-js/intro2node.md",
+    "bootstrap.md",
+    "webasm.md",
+    "html-css-intermediate/html-intermediate.md"
+  ]
+}
