@@ -23,7 +23,8 @@
     - You can use the `min` and `max` attributes to constrain the range of a number input.
     - You can also use the `pattern` attribute to force the user input to match a regular expression.
 - For multiline inputs, there is the `<textarea>` element. You can set their initial size with the rows and cols attributes. 
-- Labels are used for accessibility purposes. When the label associated with an input is clicked, the cursor will focus on the input.
+- The `<label for="id-of-form-element">` element is used for accessibility purposes. When the label associated with an input is clicked, the cursor will focus on the input.
+	- 
 - When a form is submitted, it will create a form object at send it via the specified URL and HTTP request. The properties of the object will correspond to the name attributes of the different form control elements: 
 ```
 "form": {

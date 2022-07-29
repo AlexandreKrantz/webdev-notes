@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "webgl2.md",
+            "file": "html-css-intermediate/html-intermediate.md",
             "mode": "source",
             "source": false
           }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "accessib",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -49,11 +49,12 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 224.5
   },
   "right": {
     "id": "35ed94d6973034d9",
@@ -69,7 +70,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "webgl2.md",
+                "file": "html-css-intermediate/html-intermediate.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -87,16 +88,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "7e399b2badafb57b",
+  "active": "1b85c45dad61a2b8",
   "lastOpenFiles": [
-    "webgl2.md",
-    "node-js/img/Pasted image 20220701143900.png",
+    "javascript-intermediate/using-apis.md",
+    "javascript-intermediate/async-await.md",
+    "other/wordpress.md",
     "node-js/intro2node.md",
     "node-js/debugging-node.md",
-    "bootstrap.md",
-    "design-ux.md",
-    "typescript.md",
-    "webasm.md",
-    "html-css-intermediate/html-intermediate.md"
+    "other/bootstrap.md",
+    "other/design-ux.md",
+    "other/typescript.md",
+    "other/webasm.md",
+    "other/webgl2.md"
   ]
 }
