@@ -5,7 +5,9 @@
 
 - Before webpack tools such as grunt or gulp were used to process assets.
 
-- Generate a webpack configuration file with the webpack cli: `npx webpack-cli init`.
+- Generate a **webpack configuration file** with the webpack cli: `npx webpack-cli init`.
+	- Make sure to install the webpack CLI globally first with npm.
+	- [Webpack CLI docs]([Command Line Interface | webpack](https://webpack.js.org/api/cli/))
 
 - When you run `npx webpack` the default behavior is to take the script at `src/index.js` as the entry point, and generate `dist/main.js` as the output.
 
@@ -18,7 +20,7 @@
     ```
 
 
-- Putting webpack in development mode will enable source maps. This way you can debug your code using Chrome DevTools and put breakpoints on the original src file.
+- Putting webpack in development mode will **enable source maps**. This way you can debug your code using Chrome DevTools and put breakpoints on the original src file.
 
   Add this to your webpack config file:
 
@@ -30,5 +32,6 @@
   ```
 
   Or add this option to your webpack CLI command: `webpack -d --mode development`
+- To have webpack automatically watch for changes and rebuild, add `--watch` to your npm build script.
 
   

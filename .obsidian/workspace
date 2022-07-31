@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "html-css-intermediate/html-intermediate.md",
+            "file": "javascript-intermediate/testing-jest.md",
             "mode": "source",
             "source": false
           }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "accessib",
+                "query": "webpack",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -49,12 +49,11 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 224.5
+    "width": 211.5
   },
   "right": {
     "id": "35ed94d6973034d9",
@@ -70,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "html-css-intermediate/html-intermediate.md",
+                "file": "javascript-intermediate/testing-jest.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,17 +87,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "1b85c45dad61a2b8",
+  "active": "7e399b2badafb57b",
   "lastOpenFiles": [
+    "javascript-intermediate/es6-babel.md",
+    "javascript-intermediate/oop-principles.md",
     "javascript-intermediate/using-apis.md",
-    "javascript-intermediate/async-await.md",
-    "other/wordpress.md",
-    "node-js/intro2node.md",
-    "node-js/debugging-node.md",
-    "other/bootstrap.md",
-    "other/design-ux.md",
-    "other/typescript.md",
-    "other/webasm.md",
-    "other/webgl2.md"
+    "javascript-intermediate/testing-jest.md",
+    "workflow.md",
+    "javascript-intermediate/webpack.md",
+    "javascript-intermediate/event-loop.md",
+    "html-css-intermediate/html-intermediate.md",
+    "().md",
+    "javascript-intermediate/async-await.md"
   ]
 }

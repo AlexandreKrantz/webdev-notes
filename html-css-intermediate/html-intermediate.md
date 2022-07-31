@@ -24,7 +24,10 @@
     - You can also use the `pattern` attribute to force the user input to match a regular expression.
 - For multiline inputs, there is the `<textarea>` element. You can set their initial size with the rows and cols attributes. 
 - The `<label for="id-of-form-element">` element is used for accessibility purposes. When the label associated with an input is clicked, the cursor will focus on the input.
-	- 
+	- You can either make the `for` field correspond to the id of the form element you want to label OR you can just make the label the parent element of the form element.
+	- Add the label text inside the opening and closing label elements.
+	- If you don't want to display the label on the page but keep it accessible for screen readers use `position: absolute;` and move the label off-screen (`left: -10000px;`). 
+		- Don't hide them with `display:none` or `visibility: hidden` as this will also hide the labels from screen readers.
 - When a form is submitted, it will create a form object at send it via the specified URL and HTTP request. The properties of the object will correspond to the name attributes of the different form control elements: 
 ```
 "form": {
