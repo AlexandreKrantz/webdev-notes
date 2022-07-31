@@ -14,6 +14,6 @@ test('two plus two is four', () => {
 });
 ```  
 - `toBe` is one type of "matcher" that tests for exact equality with the value that is passed into it. 
-	- There are [other types of matchers]([Using Matchers · Jest (jestjs.io)](https://jestjs.io/docs/using-matchers)) that can be used to test for ranges, regular expressions, or compare objects, etc.
+	- There are [other types of matchers](https://jestjs.io/docs/using-matchers) that can be used to test for ranges, regular expressions, or compare objects, etc.
 - By default, the current version of Jest will not recognize ES6 import statements. You should use [[es6-babel#Babel |Babel]] to transpile to ES5 ([specific instructions](https://jestjs.io/docs/en/getting-started#using-babel))
 - 

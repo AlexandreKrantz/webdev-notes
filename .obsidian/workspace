@@ -4,15 +4,23 @@
     "type": "split",
     "children": [
       {
-        "id": "7e399b2badafb57b",
+        "id": "3b226a8412125180",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "javascript-intermediate/testing-jest.md",
+            "file": "readme.md",
             "mode": "source",
             "source": false
           }
+        }
+      },
+      {
+        "id": "1f0ace00da5239b8",
+        "type": "leaf",
+        "state": {
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -40,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "webpack",
+                "query": "webpack init",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -69,13 +77,13 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "javascript-intermediate/testing-jest.md",
+                "file": "readme.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
-                "backlinkCollapsed": false,
+                "backlinkCollapsed": true,
                 "unlinkedCollapsed": true
               }
             }
@@ -87,17 +95,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "7e399b2badafb57b",
+  "active": "3b226a8412125180",
   "lastOpenFiles": [
-    "javascript-intermediate/es6-babel.md",
-    "javascript-intermediate/oop-principles.md",
-    "javascript-intermediate/using-apis.md",
     "javascript-intermediate/testing-jest.md",
-    "workflow.md",
-    "javascript-intermediate/webpack.md",
-    "javascript-intermediate/event-loop.md",
-    "html-css-intermediate/html-intermediate.md",
-    "().md",
-    "javascript-intermediate/async-await.md"
+    "javascript-intermediate/es6-babel.md",
+    "javascript-intermediate/using-apis.md",
+    "node-js/intro2node.md",
+    "node-js/debugging-node.md",
+    "readme.md",
+    "readme.md.md",
+    "[Using.md",
+    "javascript-intermediate/async-await.md",
+    "().md"
   ]
 }

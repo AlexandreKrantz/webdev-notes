@@ -5,8 +5,33 @@
   - When a function finishes, it's an event that can trigger other functions to run. 
 - Def. callbacks = functions that are passed into another function as an argument. 
 - Both your browser JavaScript and Node.js run on the Chrome V8 JavaScript runtime engine. The engine essentially acts like an interpreter and compiler.
+
+### Node Modules
 - `require()` is a function in Node used to load modules. These can be your own files, default bundled modules like file system and HTTP, or third-party npm modules.
   - A Node module is a reusable block of code whose existence does not accidentally impact other code.  
+  - You can do `require('name-of-node-module')` instead of specifying the full path because require automatically scans the node_modules folder.
+- **CommonJS** is a project with the goal to establish conventions on the [module](https://en.wikipedia.org/wiki/Subprogram "Subprogram") ecosystem for [JavaScript](https://en.wikipedia.org/wiki/JavaScript "JavaScript") outside of the [web browser](https://en.wikipedia.org/wiki/Web_browser "Web browser"). NodeJS uses the CommonJS specification.
+	- One big difference compared to regular JS is that you can't use [[es6-babel |ES6]] import/export statements like `import { X } from './Yfile.js';` statements. 
+	- Instead, you use `const X = require('./Yfile.js');`. For exports you do `module.exports = { X };`.
+	- Many people use [[es6-babel#Babel|Babel]] to convert ES6 import/export to CommonJS require statements. Here's an example `.babelrc` file for that:
+``` json
+{
+  "plugins": ["@babel/syntax-dynamic-import"],
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "modules": false,
+        "targets": { 
+          "node": "current" 
+        }
+      }
+    ]
+  ]
+}
+```
+- [More info about require vs. import]([node.js - The difference between "require(x)" and "import x" - Stack Overflow](https://stackoverflow.com/questions/46677752/the-difference-between-requirex-and-import-x)) (second answer is rlly good)
+
 ### Intro to the Server Side
 - Web browsers communicate with web servers using HTTP. The HTTP request includes a URL identifying the affected resource, a method that defines the required action (for example to get, delete, or post the resource), and may include additional information encoded in URL parameters (the field-value pairs sent via a query string), as POST data (data sent by the HTTP POST method), or in associated cookies.
 - Web servers wait for client request messages, process them when they arrive, and reply to the web browser with an HTTP response message. 
@@ -19,6 +44,7 @@
 ![web_application_with_html_and_steps](img/web_application_with_html_and_steps.png)
 - Server-side website programming mostly involves choosing which content is returned to the browser in response to requests. As long as the web app returns valid HTTP responses, it is free to be in any language and use all the features of the OS.
 - Implementing a vital feature like an HTTP server is really hard to do from scratch, so you use frameworks (eg. Django, ExpressJS, etc)
+
 ### Client-Server Overview 
 - HTTP request includes:
   - A URL identifying the target server and resource (e.g. an HTML file, a particular data point on the server, or a tool to run).
