@@ -1,1 +1,1 @@
-Hi, these are all my notes about coding.
+Hi, these are all my coding notes.

@@ -38,8 +38,4 @@
 ## Tightly Coupled Objects
 - Individual objects should be designed so that they can stand alone as much as possible. 
 - Coupling between modules occurs when one module directly references another module. In other words, one module “knows” about another module.
-### Publish/Subscribe
-- Pub/Sub pattern is used to achieve loose coupling between modules
-- Mediator object is an object that isolates the publisher from the subscriber.
-  - Eg: Airplanes never communicate directly with each other. Airplanes instead only provide information to, and receive information from the tower, and therefore do not “know” about one another without information from the tower. The flight control tower is the mediator for airplane communications.
-- Topic-based simply means that there are topics that a module can either subscribe to, publish to, or both. A module is also able to unsubscribe from a topic if needed. A topic is defined by the mediator and modules can get/update its data. 
+- You should aim to [[testing-concepts#Reduce Coupling|reduce coupling]] 

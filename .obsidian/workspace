@@ -4,23 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "3b226a8412125180",
+        "id": "b8a3fd83bbcd5471",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "readme.md",
+            "file": "javascript/babel.md",
             "mode": "source",
             "source": false
           }
-        }
-      },
-      {
-        "id": "1f0ace00da5239b8",
-        "type": "leaf",
-        "state": {
-          "type": "empty",
-          "state": {}
         }
       }
     ],
@@ -48,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "webpack init",
+                "query": "factory",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -61,7 +53,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 211.5
+    "width": 231.5
   },
   "right": {
     "id": "35ed94d6973034d9",
@@ -77,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "readme.md",
+                "file": "javascript/babel.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,17 +87,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "3b226a8412125180",
+  "active": "b8a3fd83bbcd5471",
   "lastOpenFiles": [
-    "javascript-intermediate/testing-jest.md",
-    "javascript-intermediate/es6-babel.md",
-    "javascript-intermediate/using-apis.md",
-    "node-js/intro2node.md",
-    "node-js/debugging-node.md",
+    "javascript/jest.md",
+    "javascript/es6.md",
+    "javascript/design-patterns.md",
+    "javascript/async-await.md",
+    "bash-basics.md",
+    "javascript/babel.md",
     "readme.md",
-    "readme.md.md",
-    "[Using.md",
-    "javascript-intermediate/async-await.md",
-    "().md"
+    "workflow.md",
+    "webdev-intro.md",
+    "html-css/5-css-basics.md"
   ]
 }

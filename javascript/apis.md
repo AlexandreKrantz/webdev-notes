@@ -32,3 +32,17 @@ fetch('http://example.com/movies.json')
   .then(response => response.json())
   .then(data => console.log(data));
 ```
+
+- The fetch method has an optional second parameter: an `init` object. This object can have a bunch of different options that allow you to specify data, credentials, etc. 
+	- [More info]([Using the Fetch API - Web APIs | MDN (mozilla.org)](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch#supplying_request_options)) 
+	- Example:
+``` javascript
+fetch('https://example.com/profile', {
+  method: 'POST', // or 'PUT'
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(data),
+})
+```
+

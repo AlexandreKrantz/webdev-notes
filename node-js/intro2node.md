@@ -11,26 +11,25 @@
   - A Node module is a reusable block of code whose existence does not accidentally impact other code.  
   - You can do `require('name-of-node-module')` instead of specifying the full path because require automatically scans the node_modules folder.
 - **CommonJS** is a project with the goal to establish conventions on the [module](https://en.wikipedia.org/wiki/Subprogram "Subprogram") ecosystem for [JavaScript](https://en.wikipedia.org/wiki/JavaScript "JavaScript") outside of the [web browser](https://en.wikipedia.org/wiki/Web_browser "Web browser"). NodeJS uses the CommonJS specification.
-	- One big difference compared to regular JS is that you can't use [[es6-babel |ES6]] import/export statements like `import { X } from './Yfile.js';` statements. 
-	- Instead, you use `const X = require('./Yfile.js');`. For exports you do `module.exports = { X };`.
-	- Many people use [[es6-babel#Babel|Babel]] to convert ES6 import/export to CommonJS require statements. Here's an example `.babelrc` file for that:
+	- One big difference compared to regular JS is that you can't use [[es6 |ES6]] import/export statements like `import { X } from './Yfile.js';` or `export { X };`. 
+	- For imports, you use `const { X } = require('./Yfile.js');`.
+	- For exports, you use `module.exports = { X };` (or the `exports = { X };` shortcut pointer). 
+	- Many people use [[es6#Babel|Babel]] to convert ES6 import to CommonJS require statements. 
+		- Just modify your `.babelrc` file so that it transpiles to `cjs` (commonjs): 
 ``` json
 {
   "plugins": ["@babel/syntax-dynamic-import"],
   "presets": [
     [
       "@babel/preset-env",
-      {
-        "modules": false,
-        "targets": { 
-          "node": "current" 
-        }
-      }
+      {"modules": "cjs"}
     ]
   ]
 }
-```
-- [More info about require vs. import]([node.js - The difference between "require(x)" and "import x" - Stack Overflow](https://stackoverflow.com/questions/46677752/the-difference-between-requirex-and-import-x)) (second answer is rlly good)
+```  
+- [More info about the `modules` option]([javascript - Force Babel to transform import into require? - Stack Overflow](https://stackoverflow.com/questions/66095924/force-babel-to-transform-import-into-require))
+- [More info about require vs. import]([node.js - The difference between "require(x)" and "import x" - Stack Overflow](https://stackoverflow.com/questions/46677752/the-difference-between-requirex-and-import-x)) 
+
 
 ### Intro to the Server Side
 - Web browsers communicate with web servers using HTTP. The HTTP request includes a URL identifying the affected resource, a method that defines the required action (for example to get, delete, or post the resource), and may include additional information encoded in URL parameters (the field-value pairs sent via a query string), as POST data (data sent by the HTTP POST method), or in associated cookies.
@@ -38,10 +37,10 @@
   - The response contains a status line indicating whether or not the request succeeded (e.g. "HTTP/1.1 200 OK" for success).
   - The body of a successful response to a request would contain the requested resource (e.g. a new HTML page, or an image, etc...), which could then be displayed by the web browser.
 - Def. a static site is one that returns the same hard-coded content from the server whenever a particular resource is requested
-![basic_static_app_server](img/basic_static_app_server.png)
+![basic_static_app_server](basic_static_app_server.png)
 - A dynamic website is one where some of the response content is generated dynamically, only when needed. 
   - Eg:  HTML pages created by inserting data from a database into placeholders in HTML templates 
-![web_application_with_html_and_steps](img/web_application_with_html_and_steps.png)
+![web_application_with_html_and_steps](web_application_with_html_and_steps.png)
 - Server-side website programming mostly involves choosing which content is returned to the browser in response to requests. As long as the web app returns valid HTTP responses, it is free to be in any language and use all the features of the OS.
 - Implementing a vital feature like an HTTP server is really hard to do from scratch, so you use frameworks (eg. Django, ExpressJS, etc)
 
