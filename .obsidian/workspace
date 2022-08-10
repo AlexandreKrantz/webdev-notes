@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "javascript/babel.md",
+            "file": "javascript/design-patterns.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "javascript/babel.md",
+                "file": "javascript/design-patterns.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,15 +89,15 @@
   },
   "active": "b8a3fd83bbcd5471",
   "lastOpenFiles": [
+    "javascript/testing-concepts.md",
+    "javascript/babel.md",
     "javascript/jest.md",
     "javascript/es6.md",
     "javascript/design-patterns.md",
     "javascript/async-await.md",
     "bash-basics.md",
-    "javascript/babel.md",
     "readme.md",
     "workflow.md",
-    "webdev-intro.md",
-    "html-css/5-css-basics.md"
+    "webdev-intro.md"
   ]
 }
