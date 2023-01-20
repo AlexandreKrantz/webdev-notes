@@ -1,0 +1,364 @@
+# Comp302
+## Exceptions and Backtracking
+So far every expression in ocaml :
+- has a type
+- computes a value or diverges (infinite loop)
+
+exceptions may also have an ==effect==: 
+- raise exceptions
+- print to screen etc
+
+Expression 3/0: 
+- Type: int
+- Value: no value
+- Effect: raises run-time exception Division_by_zero
+
+```OCaml
+let head_of_empty_list = 
+	let head (x::t) = x in
+	head []
+```
+- Type: 'a
+- Value: no value
+- Effect: raises run-time exception Match_failure
+
+---
+
+```OCaml
+type key = int
+type 'a tree =
+	| Empty
+	| Node of 'a tree * (key * 'a) * 'a tree
+```
+Node is a constructor that takes: a tree, a pair of a key together with a value dictated by the type of the tree and another tree
+
+```Ocaml
+let example_tree : string tree =
+  Node(Node(Empty, (3, "World"), Empty), (5, "Hello"), Empty)
+```
+
+binarySearchTree algo
+
+```Ocaml
+exception NoSuchKey of key
+exception Invariant of string
+
+let rec lookup (t : 'a tree) (k : key) : 'a = 
+  match t with
+  | Empty -> raise (NoSuchKey k)
+  | Node (left, (k', v), right) -> 
+      if k = k' then v else
+      if k < k' then lookup left k else
+        (*then k > k'*) 
+        lookup right k
+```
+
+**syntax:**
+raise (your_exception of type_of_exception)
+
+Catching exceptions: 
+**syntax:**
+try /regular_behavior/  with 
+| Exceptuion 1 -> ...
+| Exceptuion 2 -> ...
+
+if the regular behavior succeeds -> that's what gets executed
+```Ocaml
+let lookup_top (print_val : 'a -> string) (t : 'a tree) (k: key) = 
+  try 
+    let v = lookup t k in
+    print_string("Found value for " ^ string_of_int k ^ ": "^ print_val v)
+  with 
+  | NoSuchKey k -> 
+      print_string("No such key: " ^ string_of_int k)
+
+(*Calling: 
+lookup_top (fun x -> x) example_tree 5
+Found value for 5: Hello
+*)
+
+```
+Actually this function prints the value found but it returns [unit = ()] which is an equivalent of void in human programming languages (not OCaml)
+
+---
+#### Backtracking
+Def: generaal algorithm for finding all (or some) solutions incrementally - abandons partial candidates as soon as it determines that it cannot lead to a successful solution 
+ex. puzzles, crosswords, sudoko
+
+```Ocaml
+exception Change     
+   
+let rec change (coins: int list) (amount : int) : int list =
+  match coins with 
+  (*Bolean check:
+  we don't care what the list is WHEN amount = 0*)
+  | _ when amount = 0 -> []
+  | [] -> raise Change
+  | coin :: cs -> 
+      if coin > amount then change cs amount else
+        try
+          coin :: change (coin :: cs) (amount - coin)
+        with 
+        | Change -> change cs amount
+                                                 
+
+let change' coins amount : int list option =
+  try 
+    Some (change coins amount)
+  with 
+  | Change -> None
+```
+
+Different version of lookup (for any binary tree, not necessarily binary search tree, which means that we can't tell where the value might be based on the current nodes => check every node
+pre-order traversal: Node, left, right)
+
+```OCaml
+let rec lookup' (t : 'a tree) (k : key) : 'a = match t with
+  | Empty -> raise (NoSuchKey k)
+  | Node (l, (k', v), r) -> 
+      if k = k' then v else
+        try 
+          lookup' l k
+        with
+        | (NoSuchKey k) -> 
+            lookup' r k 
+```
+
+## Modules
+Just like functions, modules are first class 
+they allow: 
+- split large programs into separate pieces
+- create new namespaces
+- create new abstractions
+
+```OCaml 
+type ordering = LT | EQ | GT
+
+module type  ORDERED = sig 
+  type t 
+  val compare : t -> t -> ordering
+(* compare must satisfy 
+  -reflexivity: compare x x = EQ for all x
+  -transitivity: if compare x y = LT or EQ and compare y z = LT or EQ then 
+  compare x z = LT or EQ
+  -anti-symmetry: if compare x y = LT or EQ and compare y x = LT or EQ then
+  compare x y = EQ*)
+
+end
+
+
+module IntLt = struct
+  type t = int
+  let compare : t -> t -> ordering = fun s t -> 
+    if s < t then LT else
+    if s = t then EQ else
+      GT
+end
+```
+
+The signature sig is saying:
+you have to provide me
+- a type t
+- a function compare with defined type singature 
+=> like an interface
+
+==transformation of modules== is called ==functor== in OCaml
+
+```OCaml
+module type SET = 
+  functor (Elt : ORDERED) -> sig
+    type elt = Elt.t 
+    type t (* abstract *)
+           
+    val empty : t
+    val add : elt -> t -> t
+    val member : elt -> t -> bool
+      
+    val to_list : t -> elt list
+  end
+           
+module Set : SET = functor (Elt : ORDERED) -> struct
+  type elt = Elt.t
+  type t = elt list
+      
+  let empty = []
+  let rec add (x : elt) (set : t) : t = match set with
+    | [] -> [x]
+    | y :: set -> 
+        match Elt.compare x y with
+        | LT -> x :: y :: set
+        | EQ -> y :: set
+        | GT -> y :: add x set
+  let rec member x = member x (* exercise *)
+  let to_list x = x
+end
+
+module IntSet = Set(IntLt)
+
+let initial= 
+  IntSet.empty |> IntSet.add 5 |> IntSet.add 8 |> IntSet.add 2 
+  |> IntSet.to_list
+```
+
+## Continuations
+
+```Ocaml
+let rec append l1 l2 = match l1 with
+  | [] -> l2
+  | x :: xs -> x :: append xs l2
+```
+Running time: linear in l1 - O(n)
+Memory usage: linear in l1 - O(n)
+
+We could rewrite this as
+```OCaml
+let rec append l1 l2 = match l1 with
+  | [] -> l2
+  | x :: xs -> 
+	  let ys = append xs l2 in
+	  x :: ys
+```
+This is NOT tail-recursive
+
+Tail call optimization - recycle stack frames when a function call is the final expression to evaluate in a function. This call is ==tail call==
+
+**All functions can be written tail recursively**
+new return type 'r - return anything
+```OCaml
+let rec append' l1 l2 (return : 'a list -> 'r) : 'r
+```
+'r in the argument function should match the return type in the main function!
+
+```OCaml
+let rec append' l1 l2 (return : 'a list -> 'r) : 'r = match l1 with
+  | [] -> return l2
+  | x :: xs -> 
+      append' xs l2 (fun ys -> return (x :: ys))
+```
+start from l2 and add x to it for every recursive call
+
+To call the previous function: 
+```OCaml
+append' [1;2;3] [4;5;6] (fun x -> x)
+```
+fun x -> x is the identity function to get the list itself
+
+The return function is an example of a ==continuation==
+==Definition==: Continuation is a representation of the execution state of a program at a certain point in time
+In our case the execution state we want to represent and manipulate ourselves is the call stack
+
+Note that on small lists, the regular non-tail recursive function will outperform the continuation function!
+However, regular append will crash on very large lists, whereas append_tr will run.
+
+Both use O(n) memory, but it's the **type** of the memory used that is different:
+- append uses the **stack** which is not very big (8 MB)
+- append_cont uses the **heap** which is plentiful (Several GB)
+
+However, continuations in the form of closures (functions capturing an environment) incurs an extra time and space penalty
+
+### How to convert to continuation-passing style
+1) Change the type signature: add the continuation
+   ex
+   ``` OCaml
+   append : 'a list -> 'a list -> 'a list 
+   
+   becomes 
+   
+   append_tr: 'a list -> 'a list -> ('a list -> 'r) -> 'r
+   ```
+2)  Move all the work that should happen after the recursive call into continuation
+   ex
+	```OCaml
+	  | x :: xs -> 
+		  let ys = append xs l2 in
+		  x :: ys
+	
+	becomes
+	
+	  | x :: xs ->  
+	  append_tr xs l2 (fun ys -> return (x :: ys))
+	   ```
+	   and returning becomes an explicit call to the continuation 
+
+### Advanced control flow with continuations
+
+```OCaml
+type 'a tree = 
+  | Empty
+  | Node of 'a tree * 'a * 'a tree
+              
+let rec find (p : 'a -> bool) (t: 'a tree) : 'a option = match t with
+  | Empty -> None
+  | Node (l, x, r) -> 
+      if p x then Some x else
+        match find p l with
+        | None -> find p r (* If the left search fails, then try the right*)
+        | Some x -> Some x(* If it succeeds, then we succeed*)
+                      
+let rec find_tr (p : 'a -> bool) (t: 'a tree)
+    (fail : unit -> 'r ) (return : 'a -> 'r) : 'r = 
+  match t with
+  | Empty -> fail ()
+  | Node (l, x, r) -> 
+      if p x then return x else
+        find_tr p l (fun () -> find_tr p r fail return)
+          return 
+```
+
+Another example of using continuations:
+``` OCaml
+type 'a tree = 
+  | Empty
+  | Node of 'a tree * 'a * 'a tree
+
+(*appending one list to another*) 
+let l1 = [1;2;3] @ [4;5;6]              
+
+let rec find_all (p : 'a -> bool) (t : 'a tree) : 'a list = 
+  (* Empty tree has no satisfying elements
+  node has those from the left and those from the right 
+  plus the current element if it is good *)
+  match t with
+  | Empty -> []
+  | Node (l, x, r) -> 
+      let good_l = find_all p l in
+      let good_r = find_all p r in
+      if p x then 
+        good_l @ x :: good_r
+(* Alternatviely good_l @ [x] @ good_r *)
+      else 
+        good_l @ good_r
+        
+let rec find_all_tr (p : 'a -> bool) (t : 'a tree) (return : 'a list -> 'r) : 'r = 
+  match t with 
+  | Empty -> return []
+  | Node (l, x, r) -> 
+      find_all_tr p l (fun good_l -> 
+          find_all_tr p r ( fun good_r ->
+              if p x then 
+                return (good_l @ x :: good_r)
+              else
+                return (good_l @ good_r)
+            )
+        )
+        
+        
+let t = Node (
+    Empty, 
+    5, 
+    Node(
+      Empty, 
+      6, 
+      Empty
+    )
+  )
+    
+    
+    
+    
+```
+
+Calling the function:
+```OCaml
+find_all_tr (fun x -> x mod 2 = 0) t (fun x -> x) ;;
+```

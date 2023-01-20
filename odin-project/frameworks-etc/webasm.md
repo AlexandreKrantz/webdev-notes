@@ -1,5 +1,16 @@
+## Useful Links
+- https://ariya.io/2019/05/basics-of-memory-access-in-webassembly | Basics of Memory Access in WebAssembly · ariya.io
+- https://emscripten.org/docs/getting_started/Tutorial.html | Emscripten Tutorial — Emscripten 3.1.19-git (dev) documentation
+
+#### Helpful for Emscripten Install
+- https://emscripten.org/docs/getting_started/downloads.html | Download and install — Emscripten 3.1.19-git (dev) documentation
+- https://stackoverflow.com/questions/65348890/python-was-not-found-run-without-arguments-to-install-from-the-microsoft-store | Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings - Stack Overflow
+- https://stackoverflow.com/questions/4037939/powershell-says-execution-of-scripts-is-disabled-on-this-system | windows server 2008 r2 - PowerShell says "execution of scripts is disabled on this system." - Stack Overflow
+
+## WebAssembly Concepts
 - The raw primitives that WebAssembly adds to the Web platform = a binary format for code and APIs for loading and running this binary code. 
 - By itself, WebAssembly cannot currently directly access the DOM; it can only call JavaScript, passing in integer and floating point primitive data types. Thus, to access any Web API, WebAssembly needs to call out to JavaScript, which then makes the Web API call. 
+
 ## Using Emscripten
 - Emscripten generates an HTML file with the JS glue code. The JavaScript glue code is not as simple as you might imagine. For a start, Emscripten implements popular C/C++ libraries like SDL, OpenGL, etc. 
   - The generated HTML document loads the JavaScript glue file and writes stdout to a `<textarea>`. If the application uses OpenGL, the HTML also contains a `<canvas>` element that is used as the rendering target. 

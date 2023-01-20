@@ -1,1 +1,0 @@
-Hi, these are all my coding notes.

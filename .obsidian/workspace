@@ -7,12 +7,8 @@
         "id": "b8a3fd83bbcd5471",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "javascript/design-patterns.md",
-            "mode": "source",
-            "source": false
-          }
+          "type": "graph",
+          "state": {}
         }
       }
     ],
@@ -53,7 +49,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 231.5
+    "width": 182.5
   },
   "right": {
     "id": "35ed94d6973034d9",
@@ -69,7 +65,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "javascript/design-patterns.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -79,25 +74,44 @@
                 "unlinkedCollapsed": true
               }
             }
+          },
+          {
+            "id": "d2101ae73c836e41",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "a71c2a3e595052dc",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 170.5
   },
   "active": "b8a3fd83bbcd5471",
   "lastOpenFiles": [
-    "javascript/testing-concepts.md",
-    "javascript/babel.md",
-    "javascript/jest.md",
-    "javascript/es6.md",
+    "html-css/5-css-basics.md",
+    "img/basic_static_app_server.png",
+    "webdev-intro.md",
+    "readme.md",
+    "bash-basics.md",
+    "node-js/intro2node.md",
+    "node-js/debugging-node.md",
     "javascript/design-patterns.md",
     "javascript/async-await.md",
-    "bash-basics.md",
-    "readme.md",
-    "workflow.md",
-    "webdev-intro.md"
+    "javascript/apis.md"
   ]
 }

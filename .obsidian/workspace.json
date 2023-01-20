@@ -1,0 +1,226 @@
+{
+  "main": {
+    "id": "a4e92a20dbc3d46f",
+    "type": "split",
+    "children": [
+      {
+        "id": "03a341a61d5364db",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "53489e4cf720f305",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "comp303/1-encapsulation.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "ceb1030c85ba6c67",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "comp303/2-leaking-references.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "88e4f1067b5e3053",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "comp251/3-hashing.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "655632228b3b539f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "comp303/4-interfaces.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c6cb9cbd4b6f1215",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "comp303/5-generics.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "f45b96f37f07fa70",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "comp303/strategy design pattern.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d560106f143080f7",
+    "type": "split",
+    "children": [
+      {
+        "id": "7e7957bf97f78b43",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fd99d2c72a6cab7c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "1b85c45dad61a2b8",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "factory",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "846f5bdfdc1899eb",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "35ed94d6973034d9",
+    "type": "split",
+    "children": [
+      {
+        "id": "aa579586aa212540",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a3558c48a1721e44",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "comp303/strategy design pattern.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": true,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "d2101ae73c836e41",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "comp303/strategy design pattern.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "a71c2a3e595052dc",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "comp303/strategy design pattern.md"
+              }
+            }
+          },
+          {
+            "id": "6ff304f29bed19e7",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "obsidian-excalidraw-plugin:New Excalidraw drawing": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "command-palette:Open command palette": false,
+      "markdown-importer:Open format converter": false,
+      "audio-recorder:Start/stop recording": false,
+      "random-note:Open random note": false
+    }
+  },
+  "active": "f45b96f37f07fa70",
+  "lastOpenFiles": [
+    "comp303/5-generics.md",
+    "comp303/2-leaking-references.md",
+    "comp303/4-interfaces.md",
+    "comp303/3-types-polymorphism.md",
+    "comp303/1-encapsulation.md",
+    "comp251/4-nodes.md",
+    "odin-project/javascript/apis.md",
+    "odin-project/workflow.md",
+    "comp302/correctness notes.md",
+    "comp302/review classes.md"
+  ]
+}
