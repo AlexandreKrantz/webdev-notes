@@ -4,7 +4,7 @@ But how does object of different classes interact?
 
 #### Decoupling Behaviour from Implementation:
 An interface to  a class consists of the methods of that class that are accessible (or visible) to another class. -> it takes into account access modifiers and scoeps.
-For now, we define an interface to a class as the set of its public methods.
+For now, we **define an interface to a class as the set of its public methods**.
 ```java
 public class Client {
 	private Deck aDeck = new Deck();
@@ -35,7 +35,7 @@ public static List<Card> drawCards(Deck pDeck, int pNumber) {
 ```
 This method can only be used with sequence of cards that are instances of class Deck. But the same code could be useful for any object that has the two required methods draw() isEmpty().
 It would be useful to specify an abstraction of an interface without tying it to a specific class.
-This si where Java interface types come in. Java interface types provide a specification of the methods that it should be possible to invoke on an object. With interfcae types, we can define an abstraction CardSource as any object htat supporst a draw() and isEmpty() method.
+	This is where Java interface types come in. Java interface types provide a specification of the methods that it should be possible to invoke on an object. With interface types, we can define an abstraction CardSource as any object that supports a draw() and isEmpty() method.
 ```java
 public interface CardSource {
 	/**
@@ -54,7 +54,7 @@ public interface CardSource {
 ```
 This interface declaration lists two methods, and includes comments that specify the behaviour of each method. The methods have specification and no implementation.
 Interface method declaration are a specification and not an implementation, details of what the methods are expecterd to perform are very important.
-In java terminology, methods that do not have an implementation are called ==abstract methods.==
+In Java terminology, methods that do not have an implementation are called ==abstract methods.==
 To tie a class with an interface use the implement keyword
 ```java
 public class Deck implements CardSource P {
@@ -88,7 +88,7 @@ List<String> list = new ArrayList<>();
 List is an interface that specifies the usual services (add, remove, etc)
 ArryaList is an implementation of this servies that uses an array
 WE could replace ArrayList by LinkedList and the code will compile -> because even though their implementations are different but both provide the methods required by the List interface.
-Polymorphism benefits:
+##### The Pros of Polymorphism:
 - ==Loose coupling, because the code using a set of methods is not tied to a specifc implementation of these methods==
 - ==Extensibility, because we can easily add new implementaitons of an interface (new shapes in the polymorphic relation)==
 
@@ -161,7 +161,7 @@ A class diagram that models some of the key relations between the design element
 - Collections depend on Comparable
 - To indicate that  a method is static in jetUML, we can prefix the member's name with the keyword static.
 - The model includes ==cardinalities== to indicate, for example, that a deck instance will aggregate between zero and 52 instances of Card. (typical values for an association's cardinality include a specific number (for example, 1), the wildcard * (which means zero or more), and ranges as M..N, which means between M and N inclusive)
-#### Function Objects:
+#### Function Objects & Switch Statements:
 An interface type often defines only a subset of operations of classes that implement it.
 There are situations, where it is convinient to define classes that specialize in implementing only the behavior required by a small interface with only one method.
 What if we have a game that switches strategies to sort cards?
