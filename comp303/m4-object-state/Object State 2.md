@@ -44,6 +44,18 @@ Runtime exception:
 Checked exceptions:
 - indicated in method signature. Eg. `public void enroll(Student pStudent) throws CourseFullException`
 	- Define the exception: `CourseFullException extends Exception`. 
+```java
+class myCustomException extends Exception { 
+	myCustomException() {
+		super();
+	}
+
+	// optional
+	myCustomException(String msg) {
+		super(msg);
+	}
+}
+```
 - Client is responsible for handling it (method should be called in a try/catch). 
 
 ## Objects of [[Nested Classes]]

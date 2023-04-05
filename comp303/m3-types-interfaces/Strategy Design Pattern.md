@@ -20,7 +20,7 @@ Decoupling: encapsulate the behavior that varies (flying).
 // I'm decoupling : encapsulating the concept that varies
 
 public interface Flys {
-	
+
    String fly();
    
 }

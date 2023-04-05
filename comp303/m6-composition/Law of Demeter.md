@@ -112,8 +112,26 @@ public class Order {
     }
 }
 
+public class Item {
+    private String name;
+    private double price;
+
+    public Item(String name, double price) {
+        this.name = name;
+        this.price = price;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+}
+
 // Client code
 Customer customer = new Customer("John Doe", Arrays.asList(
-    new Order(Arrays.asList(new Item("Apple", 1.0), new
+    new Order(Arrays.asList(new Item("Apple", 1.0), new Item("Orange", 1.5))),
+    new Order(Arrays.asList(new Item("Banana", 0.5), new Item("Pineapple", 3.0)))
+));
+double total = 0.0;
+total = customer.getTotalPrice();
 
 ```

@@ -43,11 +43,11 @@ keys -> hash code -> hash value
 #### Open addressing 
 - Maximum 1 key/value stored per slot (no chaining)
 - More slots needed than keys 
-- Initially, you try the hash function with the prob=0. If there is a collision, you try the hash function again with probe=1, etc. until you find an empty slot. Insert the key/value at this empty slot. 
+- Initially, you try the hash function with the probe=0. If there is a collision, you try the hash function again with probe=1, etc, until you find an empty slot. Insert the key/value at this empty slot. 
 	- Searching will also use the same prob sequence, so you will have to run the hashing function multiple times. 
 - Linear probing: `h(k,i) = (h'(k) + i) mod m`
-	- In fact, the probing number is just incrementing by 1, so you are looking at adjacent slots. BUT, this will create "**primary clusters**", which are long runs of occupied slots.
 	- `i` is the **probing number**
+	- In fact, the probing number `i` is just incrementing by 1, so you are looking at adjacent slots. BUT, this will create "**primary clusters**", which are long runs of occupied slots.
 - To avoid primary clusters, we can do ***quadratic probing***. However, the issue is still there to a lesser degree. `h(k,i) = (h'(k) + i*c1 + i^2*c2) mod m`
 - Even better is ***double hashing***  `h(k,i) = (h1(k) + i*h2(k)) mod m`
 	- The first hash function is used to compute the initial hash value, and the second hash function is used to compute the step size for the probing sequence.

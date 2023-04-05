@@ -14,6 +14,7 @@ class Card {
 	Suit aSuit;
 	/** 
 	* @pre pRank != null && pSuit != null 
+	* @post returns bla bla
 	*/
 	Card(Rank pRank, Suit pSuit) {
 		assert pRank != null && pSuit != null; 

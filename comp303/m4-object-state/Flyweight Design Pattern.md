@@ -1,12 +1,12 @@
 A public **factory** class initializes and manages the objects privately. Client can only access certain number of objects using specified methods. 
 
 - cleanly manage collections of low-level immutable objects.
-- ensure the uniqueness of objects in a class. 
+- *ensure the uniqueness of objects* in a class. 
 	- in other words, make it impossible to create two distinct instances that are equal. 
 	- control the creation of flyweight objects through an access method. 
 
-Step 1: make the constructor private
-Step 2: make a new way for the client to create instances of the class. (`private static` method in class)
+**Step 1: make the constructor private
+Step 2: make a new way for the client to create instances of the class. (`private static` method in class)**
 
 
 Flyweight pattern is used when we need to create a large number of similar objects. One important feature of flyweight objects is that they are **immutable**.

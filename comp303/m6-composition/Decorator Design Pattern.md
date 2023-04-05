@@ -1,7 +1,6 @@
 The Decorator design pattern is a structural design pattern that *allows behavior to be added* to an individual object, either statically or dynamically (at runtime), *without affecting the behavior of other objects* from the same class. 
 
 - Decorator class wraps the original object and provides additional functionality while maintaining the same interface as the original object.
-
 - When implementing the DECORATOR design pattern in Java, it is a good idea to specify as `final` the field that stores a reference to the decorated object, and to initialize it in the constructor.
 - **Decorated objects lose their identity**. In other words, because a decorator is itself an object that wraps another object, a decorated object is not the same as the undecorated object.
 

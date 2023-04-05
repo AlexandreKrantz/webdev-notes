@@ -16,5 +16,8 @@ public interface CardSource {
 	}; 
 	Card draw(); 
 	boolean isEmpty(); 
-	default boolean isNull() { return false; } }
+	default boolean isNull() { return false; } 
+}
 ```
+
+Another pretty good example: [Design Patterns - Null Object Pattern (tutorialspoint.com)](https://www.tutorialspoint.com/design_pattern/null_object_pattern.htm#:~:text=In%20Null%20Object%20pattern%2C%20a,case%20data%20is%20not%20available.)

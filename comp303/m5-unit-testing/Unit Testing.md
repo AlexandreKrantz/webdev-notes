@@ -24,6 +24,7 @@ Put above the test methods to signal that they are, in fact, test methods.
 
 - Each unit test is its own method
 - A collection of tests for a project is known as a test suite.
+	- a common idiom is to have one test class per project class, where the test class collects all the tests that test methods or other usage scenarios that involve the class.
 
 
 ## AAA (Arrange, Act, Assert) Pattern
@@ -67,9 +68,9 @@ Another technique for accessing private methods/fields during runtime is [[Metap
 ## Testing with Stubs
 - In some cases, it's hard to test small units of code in isolation. Sometimes methods have dependencies on other methods or the state of the environment.
 	- A stub is a simplified version of an object created for testing purposes that reproduces the minimum requirements to test the method. 
-A stub is a piece of code used in unit testing to simulate the behavior of a component or module that the unit being tested depends on. It is typically used to isolate the unit being tested, so that it can be tested in isolation, without the need to test or use the entire system or its dependencies.
+**A stub is a piece of code used in unit testing to simulate the behavior of a component or module that the unit being tested depends on.** It is typically used to isolate the unit being tested, so that it can be tested in isolation, without the need to test or use the entire system or its dependencies.
 
-A stub typically implements just enough functionality to allow the unit being tested to run and produce a result, without actually performing the full functionality of the component or module it is replacing. For example, if a unit being tested depends on a database, a stub could be used to simulate the database by returning predefined values for certain queries, without actually connecting to a real database.
+A stub typically implements **just enough functionality to allow the unit being tested to run and produce a result, without actually performing the full functionality of the component or module it is replacing.** For example, if a unit being tested depends on a database, a stub could be used to simulate the database by returning predefined values for certain queries, without actually connecting to a real database.
 
 Stubs can be useful for several reasons in unit testing:
 -   Isolation: They allow the unit being tested to be isolated from the rest of the system, which can make testing faster, more reliable, and more repeatable.  
@@ -79,14 +80,15 @@ Stubs can be useful for several reasons in unit testing:
 
 ## Test Coverage
 Usually it's not possible to test the entire input space. Efficient testing = minimal test cases for maximal testing coverage. 
-- Black box testing = cover as much of the specified behavior of the UUT (unit under test). 
-- White box testing = cover as much of the implemented behavior of the UUT as possible. 
 
-- Structural testing involves examining the internal structure of the software, typically at the code level, to evaluate its behavior and ensure that it meets specific requirements. 
-- Functional testing focuses on testing the external behavior of the software by verifying that it performs as expected and meets the functional requirements. This type of testing is typically performed at the user interface level and can involve testing features such as input validation, output correctness, and error handling.
+- **Black box testing** is a software testing methodology in which the tester analyzes the functionality of an application without a thorough knowledge of its internal design.
+- Conversely, in **white box testing**, the tester is knowledgeable of the internal design of the application and analyzes it during testing.
+
+- **Structural testing** involves examining the internal structure of the software, typically at the code level, to evaluate its behavior and ensure that it meets specific requirements. 
+- **Functional testing** focuses on testing the external behavior of the software by verifying that it performs as expected and meets the functional requirements. This type of testing is typically performed at the user interface level and can involve testing features such as input validation, output correctness, and error handling.
 
 #### Statement coverage 
-= number of statements exectued, divided by total number of statements. 
+= number of statements executed, divided by total number of statements. 
 - a statement refers to a single executable line of code in a program. It is the smallest unit of execution in a program that can be evaluated for coverage. A statement can include any type of executable code, such as assignments, conditional statements, loops, function calls, or variable declarations.
 
 #### Branch coverage 
@@ -108,8 +110,9 @@ If only statement coverage was used, it's possible that the defect where `b` is 
 
 
 #### Path coverage
-- A path is a sequence of statements and branches that begins with the first executable statement of a program and ends with the last statement.
-- To achieve path coverage, every possible path through a program must be tested at least once. This includes not only the "normal" execution paths, but also any alternative or exceptional paths that may be taken under certain conditions.
+- Each path is a sequence of instructions that begins with the entry point of the program and ends with an exit point.
+- To achieve path coverage, every possible path through a program **(including error-inducing paths)** must be tested at least once. 
+
 Example of path coverage being better than branch coverage: 
 ```python
 def calculate(a, b, c):

@@ -1,3 +1,7 @@
+-   In Interface does not have access modifiers. Everything defined inside the Interface is assumed to have a public modifier, whereas Abstract Class can have an access modifier.
+-   The Interface cannot contain data fields, whereas the abstract class can have data fields.
+
+
 ```java
 public interface CardSource { 
 	public Card drawCard();

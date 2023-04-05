@@ -1,4 +1,5 @@
 ## The `Class` class
+- Basically, when you call `getClass` on an object (like a string for example), you are returned a `Class` object. 
 - It provides a way to retrieve metadata about a class, such as its name, fields, methods, constructors, interfaces, annotations, and more.
 
 - `Class` has no public constructor. Instead a Class object is constructed automatically by the Java Virtual Machine. It is a final class, so we cannot extend it. 

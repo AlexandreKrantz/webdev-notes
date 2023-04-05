@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "2d493ed2c717b118",
+        "id": "fa2eb3ace25576d7",
         "type": "tabs",
         "children": [
           {
-            "id": "164975e2f9348d6d",
+            "id": "e4cfa1bc88daa353",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "comp251/Dynamic Programming.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -48,7 +44,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "u",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -69,7 +65,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 253.5
+    "width": 219.5
   },
   "right": {
     "id": "35ed94d6973034d9",
@@ -80,30 +76,11 @@
         "type": "tabs",
         "children": [
           {
-            "id": "a3558c48a1721e44",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "file": "comp251/Dynamic Programming.md",
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": true,
-                "unlinkedCollapsed": true
-              }
-            }
-          },
-          {
             "id": "a71c2a3e595052dc",
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "comp251/Dynamic Programming.md"
-              }
+              "state": {}
             }
           },
           {
@@ -118,23 +95,38 @@
             }
           },
           {
-            "id": "e0de602343029f1c",
+            "id": "0196b37241eb5802",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "aeeb1f2f0bdb9d28",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "comp251/Dynamic Programming.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -148,37 +140,51 @@
       "oz-clear-unused-images:Clear Unused Images": false
     }
   },
-  "active": "164975e2f9348d6d",
+  "active": "e4cfa1bc88daa353",
   "lastOpenFiles": [
-    "comp251/textbook/Recursion.md",
-    "comp251/Dynamic Programming.md",
-    "comp303/m6-composition/Command Design Pattern.md",
-    "comp251/lectures/8-9-algorithm-paradigms.md",
-    "comp303/m5-unit-testing/Unit Testing.md",
-    "comp251/10-dynamic-programming.md",
+    "comp251/Graph Algorithms.md",
+    "comp251/Flow Networks.md",
+    "comp251/earlier stuff/Algorithm Paradigms.md",
+    "comp251/Graphs",
+    "comp251/earlier stuff/Dynamic Programming.md",
+    "img/Pasted image 20230402163228.png",
+    "img/Pasted image 20230402152458.png",
+    "img/Pasted image 20230402152445.png",
+    "img/Pasted image 20230402152430.png",
+    "img/Pasted image 20230402112857.png",
+    "img/Pasted image 20230402092836.png",
+    "img/Pasted image 20230402092102.png",
+    "img/Pasted image 20230402091310.png",
+    "comp251/earlier stuff/8-union-find.md",
+    "comp251/earlier stuff/7-red-black.md",
+    "comp251/earlier stuff/2-time-complexity.md",
+    "comp251/earlier stuff/3-hashing.md",
+    "comp251/earlier stuff/4-nodes.md",
+    "comp251/earlier stuff/6-bst.md",
+    "comp251/earlier stuff/7-avl.md",
+    "img/Pasted image 20230401163036.png",
+    "img/Pasted image 20230401161859.png",
+    "comp303/m8-inversion-of-control/Observer Design Pattern.md",
+    "comp303/m8-inversion-of-control/Visitor Design Pattern.md",
+    "comp303/UML Resources.md",
+    "comp303/m8-inversion-of-control/GUI Development Intro.md",
+    "2023-03-29.md",
+    "comp303/m8-inversion-of-control/Inversion of Control.md",
+    "comp302/ocaml resources.md",
+    "comp302/type inference.md",
+    "comp302/other notes/review classes.md",
+    "comp302/references and records.md",
+    "comp302/language design.md",
+    "comp302/program correctness.md",
+    "comp302/ocaml from the very beginning.md",
+    "comp302/ocaml environment.md",
+    "comp303/m8-inversion-of-control",
+    "comp251/algorithms",
+    "ideas",
+    "Untitled 1",
     "comp251/textbook",
-    "comp251/lectures",
-    "comp303/m6-composition/Law of Demeter.md",
-    "comp303/m6-composition/Prototype Design Pattern.md",
-    "comp303/m6-composition/Polymorphic Object Cloning.md",
-    "2023-03-03.md",
-    "comp303/m6-composition/Composite Design Pattern.md",
-    "comp303/m6-composition/Composition.md",
-    "comp303/m6-composition/Decorator Design Pattern.md",
-    "comp303/m6-composition/Sequence Diagrams.md",
-    "img/Pasted image 20230303184805.png",
-    "img/Pasted image 20230303184725.png",
+    "comp251/earlier stuff",
     "comp303/m7-inheritance",
-    "comp303/m7-inheritance/Inheritance.md",
-    "comp303/lab2cribsheet.md",
-    "comp303/m6-composition",
-    "comp303/m5-unit-testing/Metaprogramming.md",
-    "comp303/m4-object-state/Singleton Design Pattern.md",
-    "comp303/m4-object-state/Nested Classes.md",
-    "comp303/m4-object-state/Null Object Design Pattern.md",
-    "comp303/m3-types-interfaces/Interator Design Pattern.md",
-    "comp303/m4-object-state/Flyweight Design Pattern.md",
-    "comp303/m3-types-interfaces/Interfaces & Polymorphism.md",
-    "Pasted image 20221109141924.png.md"
+    "comp303/m6-composition"
   ]
 }
