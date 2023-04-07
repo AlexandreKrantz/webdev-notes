@@ -1,3 +1,3 @@
 Review: [[Decorator Design Pattern]]
 
-When a design involves multiple decorator types, as in this example, each decorator class will need to aggregate an object to be decorated. This introduces the kind of redundancy that inheritance was designed to avoid. Thus, we can use inheritance to “pull up” the aElement field into an abstract decorator base class, and define concrete decorator subclasses that then only need to deal with the specific decoration.
+When a design involves multiple decorator types, as in this example, each decorator class will need to aggregate an object to be decorated. This introduces the kind of redundancy that inheritance was designed to avoid. Thus, we can use inheritance to “pull up” the aElement field into an abstract decorator base class, and define concrete decorator subclasses that then only need to deal with the specific decoration.

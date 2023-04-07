@@ -7,15 +7,13 @@
 	- If a class does not declare to extend any class, by default it extends the library class Object. Class Object thus constitutes the root of any class hierarchy in Java code.
 
 ### Runtime vs. Static Types
-- run-time type of an object = type of the actualy object when it is initialized. Doesn't change throughout the life cycle of the object. 
+- run-time type of an object = type of the actual object when it is initialized. Doesn't change throughout the life cycle of the object. 
 - compile-time (static) type = type of the variable in which a reference to the object is stored at a particular point in the code. In a correct program the static type of an object can correspond to its run-time type, or to any supertype of its run-time type.
 	- You can downcast to get from a supertype to the run-time type
 
-
-
 ### Overriding Fields
 - `private` fields cannot be directly accessed by a subclass.
-- The general principle in Java is that the fields of an object are initialized “top down”. Thi order is achieved simply by the fact that the ***first instruction of any constructor is to call a constructor of its superclass***, and so on.
+- The general principle in Java is that the fields of an object are initialized “top down”. This order is achieved simply by the fact that the ***first instruction of any constructor is to call a constructor of its superclass***, and so on.
 	- If the superclass declares a constructor with no parameter, this call ***does not need to be explicit***.
 
 ### Overriding Methods
@@ -34,12 +32,12 @@
 - I recommend avoiding overloading methods except for widely used idioms (such as constructor overloading or library methods that support different primitive types). In many designs, the same properties can be obtained without overloading (i.e., by giving different names to the methods that take different types of arguments).
 
 ### Inheritance vs. [[Composition]]
-Which option to choose will ultimately depend on the context. Composition-based reuse generally provides more run-time flexibility. This option should therefore be favored in design contexts that require many possible configurations, or the opportunity to change configurations at run-time. At the same time, composition-based solutions provide fewer options for detailed access to the internal state of a well-encapsulated object. In contrast, inheritance-based reuse solutions tend to be better in design contexts that require a lot of compile-time configuration, because a class hierarchy can easily be designed to provide privileged access to the internal structure of a class to subclasses (as opposed to aggregate and other client classes).
+Which option to choose will ultimately depend on the context. Composition-based reuse generally provides more run-time flexibility. This option should therefore be favored in design contexts that require many possible configurations, or the opportunity to change configurations at run-time. At the same time, composition-based solutions provide fewer options for detailed access to the internal state of a well-encapsulated object. In contrast, inheritance-based reuse solutions tend to be better in design contexts that require a lot of compile-time configuration, because a class hierarchy can easily be designed to provide privileged access to the internal structure of a class to subclasses (as opposed to aggregate and other client classes).
 
 ### Abstract Classes
 - Technically, an abstract class represents a correct but incomplete set of class member declarations
 	- The class can declare new abstract methods using the same `abstract` keyword, this time placed in front of a method signature.
-- Note that because abstract classes cannot be instantiated, their constructor can only be called from within the constructors of subclasses. For this reason it makes sense to declare the constructors of abstract classes `protected`.
+- Note that because abstract classes cannot be instantiated, their constructor can only be called from within the constructors of subclasses. For this reason it makes sense to declare the constructors of abstract classes `protected`. 
 
 ### Final Methods and Classes
 - Declaring a method to be `final` means that the method cannot be overridden by subclasses. The main purpose for declaring a method to be final is to clarify our intent, as designers, that a method is not meant to be overridden.
