@@ -1,5 +1,5 @@
 ## Intro to Flow Graphs
-- A directed graph can be used to model a flow of material. 
+- A ***directed graph*** can be used to model a flow of material. 
 	- The flow is the rate at which material moves. 
 	- The edges are like pipes, and the vertices are junctions/intersections of pipes. For any vertex, total flow in must equal total flow out. 
 	- The weight of the directed edge is the flow capacity (eg. 200 gallons per hour). 

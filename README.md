@@ -8,5 +8,5 @@ There are 3 main folders worth exploring:
 - `comp251` is a class I'm currently taking on data structures and algorithms with *Java*.  
 
 Also, it's worth noting that last year I took classes on Assembly Programming (with *MIPS*) and Unix Systems (*bash*, *C*). 
-My detailed knowledge of Assembly has faded away (if it was every there in the first place), but I would say that I still have decent working proficiency in bash and C. 
+My detailed knowledge of Assembly has faded away (if it was evern there in the first place), but I would say that I still have good working proficiency in bash and C. 
 Thanks for stopping by! 

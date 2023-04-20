@@ -1,12 +1,15 @@
-- Another example inverting control.
+# Visitor Design Pattern
+- Another example of inverting control.
 - Reduces object coupling. 
 - Used when you want to support an open-ended number of operations that can be applied to an object graph, without needing to change to interface of the objects. 
 
-Example: several objects implementing `CardSource` interface
+### Scenario
+Say you have several objects implementing `CardSource` interface
 ![[Pasted image 20230329220902.png]]
-
 What if we want to extend the functionality of card sources, without breaking current code and bloating the interface with more methods? In this case we can use the Visitor pattern. 
+=> we can add this extra functionality in a visitor object. 
 
+### Example
 - Create an interface for `CardSourceVisitor` objects that interact with `CardSource` objects. 
 	- This is *abstract* visitor
 ```java
@@ -59,20 +62,56 @@ Now the `CardSource` interface is linked via dependency to `CardSourceVisitor`
 Any object graph with more than one element will have an aggregate node as its root. In our case this is `CompositeCardSource`
 ```java
 class CompositeCardSource implements CardSource {
+	...
 	public void accept (CardSourceVisitor pVisitor) {
 		pVisitor.visitCompositeCardSource(this); // right now, this method does nothing. 
 	}
 }
 ```
+This `CompositeCardSource` also contains a list of other `CardSource` objects. For example:
+![[Pasted image 20230418215125.png]]
+
 Two ways to traverse the object graph:
 1. via the `accept` method
-	- This is the more straightforward solution; we have access to the CardSources within the CompositeCardSource class. However this means that the visitor cannot determine the traversal order. 
-1. via the `visitCompositeCardSource` method
-	- Here we can send over an iterator..?
+```java
+public class CompositeCardSource implements CardSource { 
+	private final List aElements; 
+	public void accept(CardSourceVisitor pVisitor) { 
+		pVisitor.visitCompositeCardSource(this); 
+		for( CardSource source : aElements ) { 
+			source.accept(pVisitor); 
+		} 
+	} 
+}
+```
+- This is the more straightforward solution; we have access to the CardSources within the CompositeCardSource class. However this means that the visitor cannot determine the traversal order. 
 
-### Using Inheritance
-- Use an abstract visitor class to avoid duplicating traversal code. 
-...?
+2. via the `visitCompositeCardSource` method
+	- If we implement `Iterable` in the composite object, we can traverse it from the visitor object.
+```java
+public class CompositeCardSource implements CardSource, Iterable { 
+	private final List aElements; 
+	public Iterator iterator() { 
+		return aElements.iterator(); 
+	} 
+	... 
+}
+
+public class PrintVisitor implements CardSourceVisitor { 
+	public void visitCompositeCardSource( CompositeCardSource pCompositeCardSource) 
+	{ 
+		for( CardSource source : pCompositeCardSource ) { 
+		source.accept(this); 
+		} 
+	} 
+	... 
+}
+```
+
+#### Abstract Visitor Class
+NOTE: If we place the traversal code in the visit methods, and have more than one concrete visitor class, every class is bound to repeat the traversal code in its visit method.
+
+Solution = abstract visitor class that implements the `visitCompositeCardSource` method. 
 
 ### Supporting Data Flow in Visitor Structures
 - The example of `PrintVisitor` doesn't have any input or output, but most operations *do* involve data flow. 

@@ -26,6 +26,7 @@ When to call?
 Eg: call to `notifyObservers()` in the `setNumber(n)` method. Each observer then reacts to the `newNumber(n)` method by making corresponding changes to GUI. 
 ![[Pasted image 20230329094645.png]]
 
+#### Push vs. Pull Data-Flow 
 - Push data-flow strategy: Sending information to observers via the arguments of the callback function is called "pushing" data. 
 	- The type of the data is pre-determined. 
 - There may be cases where we want to the type of the data to be flexible and determined at runtime. In this case it's better to use a "pull" data-flow strategy, where you send the whole model object as a parameter to `newNumber(m)` and let `newNumber` pick out any (publicly available) data. 
@@ -55,3 +56,74 @@ You can make different callback to correspond to different events:
 We could also split Observers into different categories with different interfaces, to avoid too many do-nothing methods:
 ![[Pasted image 20230329102857.png]]
 With two abstract observers, concrete observers can be more targeted and only register for the sets of events they need to respond to. The trade-off for more flexibility is a slightly heavier interface for the Model class, because it now has to support two lists of observers with their corresponding registration methods.
+
+### Code Example
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+interface Observer {
+  void update(WeatherData weatherData);
+}
+
+class TableDisplay implements Observer {
+  public void update(WeatherData weatherData) {
+    // Update the table display with the latest weather data
+  }
+}
+
+class GraphDisplay implements Observer {
+  public void update(WeatherData weatherData) {
+    // Update the graph display with the latest weather data
+  }
+}
+
+class MapDisplay implements Observer {
+  public void update(WeatherData weatherData) {
+    // Update the map display with the latest weather data
+  }
+}
+
+class WeatherData {
+  private List<Observer> observers = new ArrayList<>();
+  private double temperature;
+  private double humidity;
+
+  public void setMeasurements(double temperature, double humidity) {
+    this.temperature = temperature;
+    this.humidity = humidity;
+    notifyObservers();
+  }
+
+  private void notifyObservers() {
+    for (Observer observer : observers) {
+      observer.update(this);
+    }
+  }
+
+  public void registerObserver(Observer observer) {
+    observers.add(observer);
+  }
+
+  public void removeObserver(Observer observer) {
+    int index = observers.indexOf(observer);
+    if (index >= 0) {
+      observers.remove(index);
+    }
+  }
+}
+
+// Usage:
+WeatherData weatherData = new WeatherData();
+
+TableDisplay tableDisplay = new TableDisplay();
+GraphDisplay graphDisplay = new GraphDisplay();
+MapDisplay mapDisplay = new MapDisplay();
+
+weatherData.registerObserver(tableDisplay);
+weatherData.registerObserver(graphDisplay);
+weatherData.registerObserver(mapDisplay);
+
+weatherData.setMeasurements(25.0, 70.0);
+
+```

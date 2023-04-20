@@ -1,3 +1,5 @@
+# Polymorphic Object Cloning
+## Copy Constructor
 A *copy constructor*, built into the class itself, is an easy way to copy an object:
 ```java
 Deck deckCopy = new Deck(pDeck);
@@ -19,22 +21,80 @@ We could use a if/else block to try and identify the class but this would violat
 => copy constructors are incompatible with polymorphism. 
 We need a new mechanism...
 
-## A Recipe for Cloning
-1. Implement the `Cloneable` interface in the class. 
-	- check if the obj is cloneable: `if( o instanceof Cloneable ) { clone = o.clone(); }`
-2. Override the `Object.clone()` method
-	- When overriding clone, it is also recommend to change its return type from `Object` to the type of the class that contains the new clone method.
-3. Calling `super.clone()` in the `clone()` method; 
-	- The overridden clone method needs to create a new object of the same class. You don't want to use the class constructor for this. The proper way to create the cloned object is by calling the method `clone()` defined in class `Object` by using the call `super.clone()`.
-```java
+## Object Clone Method
+Another way to copy an object is using the `clone()` method:  
+`if( o instanceof Cloneable ) { clone = o.clone(); }`
+
+If `o` is not already cloneable:
+1. Implement the `Cloneable` interface
+2. Override the `Object.clone()` method. There is a specific way you want to do this:
+	- In your overriding method, call `super.clone()` and then downcast it to the current class. 
+```java 
+// example:
 public Deck clone() { 
-	// NOT Deck clone = new Deck(); 
 	Deck clone = (Deck) super.clone(); 
-	... 
 }
 ```
-4. Catching `CloneNotSupportedException` in the `clone()` method; 
+
+**Note:**
+- Catching `CloneNotSupportedException` in the `clone()` method; 
 	- If you implement `Cloneable`, you shouldn't get an error. 
 	- But just to be safe, call `super.clone()` within a try/catch block. 
-5. Optionally, declaring the `clone()` method in the root supertype of a cloneable hierarchy
+- Optionally, declaring the `clone()` method in the root supertype of a cloneable hierarchy
 	- Unfortunately (and strangely), the Cloneable interface does not include the `clone()` method. You want to add it yourself to the `CardSource` composite object interface in order to freely call `clone()` using polymorphism. 
+
+```java
+public interface CardSource {
+	...
+	public CardSource clone();
+}
+
+public class Deck implements CardSource {
+	...
+	public Deck clone() throws CloneNotSupportedException {
+		Deck clone = (Deck) super.clone(); 
+	}
+}
+```
+
+### Another Example
+```java
+// Java program to illustrate Cloneable interface
+import java.lang.Cloneable;
+
+// By implementing Cloneable interface
+// we make sure that instances of class A
+// can be cloned.
+class A implements Cloneable {
+	int i;
+	String s;
+	// A class constructor
+	public A(int i, String s)
+	{
+		this.i = i;
+		this.s = s;
+	}
+	// Overriding clone() method
+	// by simply calling Object class
+	// clone() method.
+	@Override
+	protected Object clone() throws CloneNotSupportedException
+	{
+		return super.clone();
+	}
+}
+
+public class Test {
+	public static void main(String[] args) throws CloneNotSupportedException
+	{
+		A a = new A(20, "GeeksForGeeks");
+		// cloning 'a' and holding
+		// new cloned object reference in b
+		// down-casting as clone() return type is Object
+		A b = (A)a.clone();
+		System.out.println(b.i);
+		System.out.println(b.s);
+	}
+}
+
+```

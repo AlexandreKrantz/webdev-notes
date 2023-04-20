@@ -4,22 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "7bf0c70e327130a2",
+        "id": "8ac300920af94666",
         "type": "tabs",
         "children": [
           {
-            "id": "79c3c817035737aa",
+            "id": "d26dda3276264967",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "comp303/m9/Concurrency in Java.md",
+                "file": "comp251/final exam topics.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "784e7f0a24815c43",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "comp251/Extras/Randomized Algorithms.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -69,8 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "35ed94d6973034d9",
@@ -97,7 +109,36 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "comp303/m9/Concurrency in Java.md"
+                "file": "comp251/Extras/Randomized Algorithms.md"
+              }
+            }
+          },
+          {
+            "id": "3e919e513e8728f1",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "comp251/Extras/Randomized Algorithms.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "d5ebf787e0b2455b",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "comp251/Extras/Randomized Algorithms.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
               }
             }
           }
@@ -106,7 +147,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -120,53 +162,53 @@
       "oz-clear-unused-images:Clear Unused Images": false
     }
   },
-  "active": "79c3c817035737aa",
+  "active": "784e7f0a24815c43",
   "lastOpenFiles": [
-    "img/Pasted image 20230407110236.png",
-    "comp303/lab4 crib sheet.md",
+    "comp303/final exam review.md",
+    "comp251/Extras/Randomized Algorithms.md",
+    "comp251/Extras/Amortized Analysis.md",
+    "img/Pasted image 20230419231311.png",
+    "comp251/Extras",
+    "img/Pasted image 20230419215949.png",
+    "comp251/final exam topics.md",
+    "comp251/Graph Algos/Bipartite Graphs.md",
+    "comp251/Graph Algos/Flow Networks.md",
+    "comp251/Graph Algos/Minimum Spanning Tree.md",
+    "Untitled.md",
+    "img/Pasted image 20230419193440.png",
+    "comp251/Graph Algos/Search and Sort.md",
+    "comp251/Graph Algos/Intro to Graphs.md",
+    "comp251/Graph Algos/Shortest Path.md",
+    "comp251/Part 1/8-union-find.md",
+    "img/Pasted image 20230419191041.png",
+    "img/Pasted image 20230419184900.png",
+    "img/Pasted image 20230419161203.png",
+    "img/Pasted image 20230419161133.png",
+    "README.md",
+    "lab4 questions.md",
+    "img/Pasted image 20230419153302.png",
+    "img/Pasted image 20230419145742.png",
+    "img/Pasted image 20230419143121.png",
+    "comp251/Graph Algos",
+    "comp303/m9/Concurrency in Java.md",
     "comp303/m8-inversion-of-control/Visitor Design Pattern.md",
+    "comp303/midterm review.md",
     "comp303/m8-inversion-of-control/Observer Design Pattern.md",
     "comp303/m8-inversion-of-control/Inversion of Control.md",
     "comp303/m8-inversion-of-control/GUI Development Intro.md",
     "comp303/m7-inheritance/Template Method Design Pattern.md",
+    "ot.md",
     "comp303/m7-inheritance/Liskov Substitution Principle.md",
-    "comp303/m7-inheritance/Decorator Design Pattern 2.md",
     "comp303/m7-inheritance/Inheritance.md",
-    "comp303/m6-composition/Decorator Design Pattern.md",
-    "comp303/m9/Tethics.md",
-    "comp303/m9/Concurrency in Java.md",
-    "README.md",
-    "img/Pasted image 20230405105026.png",
-    "comp251/Graph Algorithms.md",
+    "comp303/m7-inheritance/Decorator Design Pattern 2.md",
+    "comp303/m6-composition/Sequence Diagrams.md",
     "comp303/m9",
-    "comp251/Flow Networks.md",
-    "comp251/earlier stuff/Algorithm Paradigms.md",
-    "comp251/Graphs",
-    "comp251/earlier stuff/Dynamic Programming.md",
-    "img/Pasted image 20230402163228.png",
-    "img/Pasted image 20230402152458.png",
-    "img/Pasted image 20230402152445.png",
-    "img/Pasted image 20230402152430.png",
-    "img/Pasted image 20230402112857.png",
-    "img/Pasted image 20230402092836.png",
-    "img/Pasted image 20230402092102.png",
-    "img/Pasted image 20230402091310.png",
-    "comp251/earlier stuff/8-union-find.md",
-    "comp251/earlier stuff/7-red-black.md",
-    "comp251/earlier stuff/2-time-complexity.md",
-    "comp251/earlier stuff/3-hashing.md",
-    "comp251/earlier stuff/4-nodes.md",
-    "comp251/earlier stuff/6-bst.md",
-    "comp251/earlier stuff/7-avl.md",
-    "img/Pasted image 20230401163036.png",
-    "comp303/UML Resources.md",
+    "comp251/Graph Algos",
     "comp303/m8-inversion-of-control",
     "comp251/algorithms",
     "ideas",
     "Untitled 1",
     "comp251/textbook",
-    "comp251/earlier stuff",
-    "comp303/m7-inheritance",
-    "comp303/m6-composition"
+    "comp251/Part 1"
   ]
 }

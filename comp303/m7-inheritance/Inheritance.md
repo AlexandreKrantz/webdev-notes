@@ -1,3 +1,4 @@
+# Inheritance
 ### Motivation
 - Say you have a few classes that implement an interface. These classes have some methods that are implemented exactly the same for the three of them, and some that vary. 
 	- DUPLICATED CODE antipattern. 

@@ -3,15 +3,15 @@ The Law of Demeter, also known as the principle of least knowledge, is a design 
 
 - Message chain antipattern: you don't want to be reaching through a large chain of object references in one go. 
 	- For example: `aFoundations.getPile(FIRST).getCards().add(pCard);`
-- The "Law of Demeter" is a tool for avoiding this antipattern. 
+The "Law of Demeter" is a tool for avoiding this antipattern:
 
-The code of a method should only access:
-- The instance variables of its implicit parameter;
-	- When a non-static method is called on an instance of the class, the method has access to the instance variables of that object, because the instance is passed as the implicit parameter to the method. So when the term "the instance variables of its implicit parameter" is used, it means the instance variables of the current object on which the method is being called.
-	- So basically it just means the instance variables of the object that the method belongs to. 
-- The arguments passed to the method;
-- Any new object created within the method; 
-- (If need be) globally available objects.
+## Law of Demeter 
+- The code of a method should only access the following instance variables: 
+	- implicit parameter = `this`. 
+		- So basically it just means the instance variables of the object that the method belongs to. 
+	- The arguments passed to the method;
+	- Any new object created within the method; 
+	- (If need be) globally available objects.
 
 To respect this guideline it becomes necessary to **provide additional services** in classes that occupy an intermediate position in an aggregation/delegation chain so that the clients do not need to manipulate the internal objects encapsulated by these objects.
 

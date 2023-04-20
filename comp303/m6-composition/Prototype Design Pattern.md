@@ -1,3 +1,4 @@
+# Prototype Design Pattern
 - We can use [[Polymorphic Object Cloning]] to support *polymorphic instantiation*. 
 
 - Scenario: create new objects using a method, but the exact type is not known at compile time. 

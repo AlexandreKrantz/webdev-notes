@@ -71,7 +71,6 @@ public class Manager implements Employee {
         }
     }
 }
-
 ```
 
 In this example, the `Employee` interface defines the common methods that are used to manipulate employees. The `Developer` class is a leaf object that represents an individual developer, while the `Manager` class is a composite object that represents a manager who oversees a group of employees.

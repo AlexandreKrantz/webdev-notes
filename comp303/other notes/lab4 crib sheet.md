@@ -5,13 +5,14 @@
 - If you override a method, the subclass version will become the default. To call the super class version, do `super.methodName();`.
 	- `@Override` states to the compiler that the method is supposed to override another. 
 	- `final` methods cannot be overriden.
-- Inheritance is better if your system can be configured at compile time; composition is better if you want you system to support run-time modifications. 
+- Inheritance is better if your system can be configured at compile time; composition is better if you want your system to support run-time modifications. 
 	- `final` classes cannot be inherited
 	- Inheritance should be used to (1) avoid duplicate code and (2) extend class with extra functionality. 
 
 - **LSP:** If S is a subtype of T, then objects of type T may be replaced with objects of type S without altering any of the desirable properties of the program.
 
 - **Template Method:** algorithm applies to a base class, but implementation varies based on the subclass. 
+	- Uses abstract class to define method which calls sub-method and has certain logic, but the sub-method is left unimplemented. 
 	- [[Template Method Design Pattern#Example]]
 
 - **Observer Design Pattern:** observer interface, implemented by several observer (event listener) objects. Model class, that holds and arraylist of observers.

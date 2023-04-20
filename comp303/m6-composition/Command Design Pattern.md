@@ -1,10 +1,9 @@
+# Command Design Pattern
 Concept: objects serve as *manageable units of functionality*
-
 - Commands are pieces of state-changing functionality. Commands accomplish something. 
 - Let's define commands as objects that implement the `Command` interface. 
 	- The interface includes an `execute()` method. 
 	- Interface may also include other methods for managing the command, such as `undo()`, `getDescription()`, etc...
-
 - **Access to command target:** Since commands typically modify the state of other objects, the command object needs to have access to these other objects. Either a reference can be stored in the command object, or pass in as a parameter to the `execute()` method. 
 - **Data flow:** interface methods `execute`, `undo`, etc will have return type `void`. So the result of the commands needs to be visible/returned some other way. 
 - **Encapsulation of target objects:** Sometimes the command will need access to parts of the target object that are private (for example to `undo`). 
@@ -12,17 +11,16 @@ Concept: objects serve as *manageable units of functionality*
 	- In this design, commands to operate on a `Deck` instance are obtained directly from the `Deck` instance of interest.
 - **Storing of data:** To undo a command, you may want to store some data of the previous state in the command object. Like a cache. 
 
-## Example (ChatGPT)
+## Command Example (ChatGPT)
 The Command design pattern is a behavioral design pattern that encapsulates a request as an object, thereby allowing you to parameterize clients with different requests, queue or log requests, and support undoable operations.
 
-In the Command pattern, there are four main participants:
-
+Four main elements of the command pattern:
 1.  The Command: This is an interface that defines the `execute()` method, which encapsulates the operation to be performed.
 2.  The Concrete Command: This is a class that implements the Command interface and contains the implementation for the `execute()` method.
 3.  The Invoker: This is a class that requests the command to be executed.
 4.  The Receiver: This is a class that performs the actual work when the command is executed.
 
-Here's an example of how the Command pattern might be implemented in Java:
+Example of how the command pattern might be implemented in Java:
 ```java
 // The Command interface
 public interface Command {

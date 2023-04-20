@@ -1,3 +1,4 @@
+# Decorator Design Pattern
 The Decorator design pattern is a structural design pattern that *allows behavior to be added* to an individual object, either statically or dynamically (at runtime), *without affecting the behavior of other objects* from the same class. 
 
 - Decorator class wraps the original object and provides additional functionality while maintaining the same interface as the original object.

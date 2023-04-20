@@ -141,9 +141,11 @@ if (myThread.isInterrupted()) {
     // handle the interrupt
 }
 ```
-
-- When a thread is interrupted, it does not necessarily stop immediately. It's up to the thread to check its interrupted status periodically and decide how to handle the interrupt. Common ways to handle an interrupt include stopping the thread gracefully, cleaning up resources, and returning control to the caller.
-	- Don't rely on the thread immediately stopping in your designs, or you might get concurrency bugs. 
+- The program will poll the thread and react to the interrupted flag. 
+	- If any thread is in sleeping or waiting state (i.e. sleep() or wait() is invoked), calling the interrupt() method on the thread, breaks out the sleeping or waiting state throwing `InterruptedException`. 
+	- If the thread is not in the sleeping or waiting state, calling the interrupt() method performs normal behaviour and doesn't interrupt the thread but sets the interrupt flag to true. It's up to the thread to check its interrupted status periodically and decide how to handle the interrupt. 
+		- Common ways to handle an interrupt include stopping the thread gracefully, cleaning up resources, and returning control to the caller.
+- The thread doesn't stop straight away. Don't rely on the thread immediately stopping in your designs, or you might get concurrency bugs. 
 
 ## Thread Safety
 - Ensure that shared variables or data structures are managed properly. 
@@ -288,9 +290,10 @@ public class Counter {
 }
 ```
 
-- Both methods are marked as `synchronized`, which means that only one thread can execute either of these methods at a time. 
 - The `synchronized(this)` block is used to acquire the intrinsic lock associated with the `Counter` object.
-	- If the intrinsic lock is available, it continues executing the synchronized method. Else, the thread is blocked until released by another thread. 
+	- Now, only the thread that has aquired the lock can execute the code inside it. 
+	- When the thread with the lock finishes executing the `synchronized` block, the lock will be freed up again. 
+- Explanation: [multithreading - What does intrinsic lock actually mean for a Java class? - Stack Overflow](https://stackoverflow.com/questions/38213467/what-does-intrinsic-lock-actually-mean-for-a-java-class)
 
 It's worth noting that in this example, we are using the `this` object as the lock associated with the `Counter` object. However, any Java object can be used as a lock. For example, we could define a separate `Lock` object and use that as the lock associated with the `Counter` object:
 ```java
