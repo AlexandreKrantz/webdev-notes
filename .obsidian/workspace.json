@@ -4,11 +4,31 @@
     "type": "split",
     "children": [
       {
-        "id": "8ac300920af94666",
+        "id": "c8179fed9fd4d51a",
         "type": "tabs",
+        "dimension": 61.24595469255664,
         "children": [
           {
-            "id": "d26dda3276264967",
+            "id": "376613423db7dbc5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "comp251/Part 1/4-nodes.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "03a7c38ff387f5ae",
+        "type": "tabs",
+        "dimension": 38.75404530744336,
+        "children": [
+          {
+            "id": "e4c4776d1f0e409f",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -18,21 +38,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "784e7f0a24815c43",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "comp251/Extras/Randomized Algorithms.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -82,7 +89,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "35ed94d6973034d9",
@@ -109,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "comp251/Extras/Randomized Algorithms.md"
+                "file": "comp251/Part 1/4-nodes.md"
               }
             }
           },
@@ -119,7 +127,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "comp251/Extras/Randomized Algorithms.md",
+                "file": "comp251/Part 1/4-nodes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -136,7 +144,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "comp251/Extras/Randomized Algorithms.md",
+                "file": "comp251/Part 1/4-nodes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,19 +170,26 @@
       "oz-clear-unused-images:Clear Unused Images": false
     }
   },
-  "active": "784e7f0a24815c43",
+  "active": "376613423db7dbc5",
   "lastOpenFiles": [
-    "comp303/final exam review.md",
-    "comp251/Extras/Randomized Algorithms.md",
+    "comp251/final exam topics.md",
+    "comp251/Part 1/4-nodes.md",
+    "comp251/Part 1/3-hashing.md",
+    "comp251/Part 1/2-time-complexity.md",
+    "comp251/Part 1/1-intro.md",
     "comp251/Extras/Amortized Analysis.md",
+    "comp251/Extras/Randomized Algorithms.md",
+    "Untitled.md",
+    "img/Pasted image 20230421112644.png",
+    "img/Pasted image 20230421112412.png",
+    "img/Pasted image 20230421112353.png",
+    "comp303/final exam review.md",
     "img/Pasted image 20230419231311.png",
     "comp251/Extras",
     "img/Pasted image 20230419215949.png",
-    "comp251/final exam topics.md",
     "comp251/Graph Algos/Bipartite Graphs.md",
     "comp251/Graph Algos/Flow Networks.md",
     "comp251/Graph Algos/Minimum Spanning Tree.md",
-    "Untitled.md",
     "img/Pasted image 20230419193440.png",
     "comp251/Graph Algos/Search and Sort.md",
     "comp251/Graph Algos/Intro to Graphs.md",
@@ -186,9 +201,6 @@
     "img/Pasted image 20230419161133.png",
     "README.md",
     "lab4 questions.md",
-    "img/Pasted image 20230419153302.png",
-    "img/Pasted image 20230419145742.png",
-    "img/Pasted image 20230419143121.png",
     "comp251/Graph Algos",
     "comp303/m9/Concurrency in Java.md",
     "comp303/m8-inversion-of-control/Visitor Design Pattern.md",
@@ -198,10 +210,6 @@
     "comp303/m8-inversion-of-control/GUI Development Intro.md",
     "comp303/m7-inheritance/Template Method Design Pattern.md",
     "ot.md",
-    "comp303/m7-inheritance/Liskov Substitution Principle.md",
-    "comp303/m7-inheritance/Inheritance.md",
-    "comp303/m7-inheritance/Decorator Design Pattern 2.md",
-    "comp303/m6-composition/Sequence Diagrams.md",
     "comp303/m9",
     "comp251/Graph Algos",
     "comp303/m8-inversion-of-control",
