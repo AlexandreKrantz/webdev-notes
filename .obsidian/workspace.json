@@ -9,12 +9,12 @@
         "dimension": 61.24595469255664,
         "children": [
           {
-            "id": "376613423db7dbc5",
+            "id": "8750a64cf1bc844e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "comp251/Part 1/7-avl.md",
+                "file": "comp251/Algorithm Design/Algorithm Paradigms.md",
                 "mode": "source",
                 "source": false
               }
@@ -28,7 +28,7 @@
         "dimension": 38.75404530744336,
         "children": [
           {
-            "id": "e4c4776d1f0e409f",
+            "id": "88b436774f2ee248",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -89,8 +89,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "35ed94d6973034d9",
@@ -117,7 +116,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "comp251/Part 1/7-avl.md"
+                "file": "comp251/final exam topics.md"
               }
             }
           },
@@ -127,7 +126,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "comp251/Part 1/7-avl.md",
+                "file": "comp251/final exam topics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -144,7 +143,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "comp251/Part 1/7-avl.md",
+                "file": "comp251/final exam topics.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -170,53 +169,52 @@
       "oz-clear-unused-images:Clear Unused Images": false
     }
   },
-  "active": "376613423db7dbc5",
+  "active": "88b436774f2ee248",
   "lastOpenFiles": [
+    "comp251/Algorithm Design/Algorithm Paradigms.md",
     "comp251/final exam topics.md",
-    "comp251/Part 1/7-avl.md",
-    "comp251/Part 1/6-bst.md",
-    "comp251/Part 1/5-heaps.md",
+    "comp251/Algorithm Design/Dynamic Programming.md",
+    "comp251/Algorithm Design/2-time-complexity.md",
+    "comp251/Data Structures/1-course-intro.md",
+    "comp251/Data Structures/8-union-find.md",
+    "comp251/Data Structures/4-union-find.md",
+    "comp251/Data Structures/3-hashing.md",
+    "img/Pasted image 20230422155115.png",
+    "img/Pasted image 20230422153839.png",
+    "comp303/final exam review.md",
+    "comp251/A.md",
+    "Untitled.md",
+    "comp251/Graph Algos/Graphs.md",
+    "comp251/Algorithm Design/Randomized Algorithms.md",
+    "comp251/Algorithm Design/Amortized Analysis.md",
+    "comp251/Algorithm Design",
+    "comp251/Data Structures/7-red-black.md",
+    "comp251/Data Structures/7-avl.md",
+    "comp251/Data Structures/6-bst.md",
+    "comp251/Data Structures/5-heaps.md",
     "img/Pasted image 20230421171542.png",
-    "comp251/Part 1/4-nodes.md",
     "img/Pasted image 20230421164309.png",
     "img/Pasted image 20230421162632.png",
-    "comp251/Part 1/3-hashing.md",
-    "comp251/Part 1/2-time-complexity.md",
-    "comp251/Part 1/1-intro.md",
-    "comp251/Extras/Amortized Analysis.md",
-    "comp251/Extras/Randomized Algorithms.md",
-    "Untitled.md",
     "img/Pasted image 20230421112644.png",
     "img/Pasted image 20230421112412.png",
     "img/Pasted image 20230421112353.png",
-    "comp303/final exam review.md",
     "img/Pasted image 20230419231311.png",
     "comp251/Extras",
     "img/Pasted image 20230419215949.png",
     "comp251/Graph Algos/Bipartite Graphs.md",
     "comp251/Graph Algos/Flow Networks.md",
     "comp251/Graph Algos/Minimum Spanning Tree.md",
-    "img/Pasted image 20230419193440.png",
     "comp251/Graph Algos/Search and Sort.md",
-    "comp251/Graph Algos/Intro to Graphs.md",
     "comp251/Graph Algos/Shortest Path.md",
-    "comp251/Part 1/8-union-find.md",
-    "img/Pasted image 20230419191041.png",
     "README.md",
     "lab4 questions.md",
     "comp251/Graph Algos",
-    "comp303/m9/Concurrency in Java.md",
-    "comp303/m8-inversion-of-control/Visitor Design Pattern.md",
-    "comp303/midterm review.md",
-    "comp303/m8-inversion-of-control/Observer Design Pattern.md",
-    "comp303/m8-inversion-of-control/Inversion of Control.md",
     "comp303/m9",
     "comp251/Graph Algos",
     "comp303/m8-inversion-of-control",
     "comp251/algorithms",
     "ideas",
     "Untitled 1",
-    "comp251/textbook",
-    "comp251/Part 1"
+    "comp251/textbook"
   ]
 }

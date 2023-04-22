@@ -1,12 +1,26 @@
 ### AVL Trees
 Super Good: [Data Structure and Algorithms - AVL Trees (tutorialspoint.com)](https://www.tutorialspoint.com/data_structures_algorithms/avl_tree_algorithm.htm)
-**Def: BST such that the heights of the two child subtrees of any node differ by at most one.** 
-- Insert, Delete & Search take O(log n) in average and worst cases; n = number of nodes in tree
-- The height of a null node in a bst is 0, and we count the number of edges between a node and a null node to get the height of that node. 
+**Def: BST such that the heights of the two child subtrees of any node differ by at most one (aka a self-balancing binary tree).** 
+- Insert, Delete & Search take **O(log n)** in average and worst cases; n = number of nodes in tree
+- The **height** of a null node in a bst is 0, and we count the *number of edges between a node and a null node to get the height of that node*. 
 - The **balance factor** of a binary tree is the difference in heights of its two subtrees **(hL - hR)**. It may take on one of the values -1, 0, +1.
 	- Left-heavy => balance > 1 => right rotation 
 	- Right-heavy => balance < -1 => left rotation
 	- All BST properties are maintained when rotating
+```
+INSERT()
+perform insertion as you would for BST
+check that the magitude of balance factor never exceeds 1
+	rebalance the tree as necessary if it does
+
+DELETE()
+- perform deletion as you would for BST
+	- If the node to be deleted has two child nodes, "promote" the inorder successor. 
+- check that the magitude of balance factor never exceeds 1
+	- rebalance the tree as necessary if it does
+```
+
+
 
 #### Outside and Inside Insertions
 - Outside insertion on the right => left rotation of subtree

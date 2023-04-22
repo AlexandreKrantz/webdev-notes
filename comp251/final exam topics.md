@@ -17,8 +17,8 @@
 - L4: disjoint sets ADT, union find Algo ✅
 	- properties of an equivalence relation + correspondance to graphs
 	- how is disjoint set implemented (relation to equivalence relation)
-	- **depth** of a node in a tree
-	- **height** of a node in a tree
+	- **depth** of a node in a tree vs. **height** of a node in a tree
+		- [algorithm - What is the difference between tree depth and height? - Stack Overflow](https://stackoverflow.com/questions/2603692/what-is-the-difference-between-tree-depth-and-height)
 	- runtime of union find
 	- fusion & path compression
 - L5: max-heap, min-heap (construction), heapsort ✅
@@ -27,17 +27,28 @@
 	- inserting into a heap + time complexity
 	- building a heap + time complexity
 	- heapsort + time complexity
-- L6: binary search tree, AVL tree
+- L6: binary search tree, AVL tree ✅
 	- what is a binary search tree? time complexity of search, insert, delete. 
 	- balanced vs unbalanced BST
 	- in-order traversal + time complexity 
 	- Sorting arrays with BST + time complexity
-	- 
-- L7: red-black trees
-- L8: programming paradigms
-	- complete search (aka recursive backtracking or brute force)
-- L9-10: divide and conquer
-- L11-13: dynamic programming
+	- Definition of AVL tree + time complexity of DS ops. 
+	- how to we calculate the height of a node?
+	- def. **balance factor**
+- L7: red-black trees ✅
+	- conditions 
+	- time complexity DS ops
+	- how does the insert operation work - practice with examples
+- L8: programming paradigms ✅
+	- complete search + give example
+	- recursive backtracking (method template)
+- L9-10: divide and conquer ✅
+	- general template 
+	- describe mergesort
+	- time completely 
+- L11-13: dynamic programming ✅
+	- what's the gist of DP?
+	- def. memoization, tabulation, bottom up, top down
 - L13-14: greedy
 - L5: graphs ✅
 - L16: topological sort, strongly connected components ✅

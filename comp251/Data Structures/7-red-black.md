@@ -1,16 +1,16 @@
 [Red-Black Trees - Data Structures - YouTube](https://www.youtube.com/watch?v=ZxCvM-9BaXE)
 
-- Balanced bst have guaranteed height of O(log(n)) for n items; so the operations are also O(log(n)).
-- Red-black tree is a specific type of balanced bst. 
+- Balanced BST have guaranteed height of O(log(n)) for n items; so the operations are also O(log(n)).
+- Red-black tree is a specific type of balanced BST. 
+- The leaves have NIL children. These are considered **black**.
 
-Conditions:
+*Conditions:*
 - Root and leaves are always black (leaves are the nil nodes, so they don't really matter)
 - **All red nodes can only have black children**
 - All leaves have the same black height
+	- ie. all paths from a node to its NIL descendants contain the same number of black nodes (= black height)
 
-=> all paths from a node to its NIL descendants contain the same number of black nodes (= black height)
-
-Operations: (all have time complexity O(log(n)))
+*Operations:* all have time complexity O(log(n))
 - Search: same as reg bst
 - Insert: [Insertion for Red-Black Trees ( incl. Examples ) - Data Structures - YouTube](https://www.youtube.com/watch?v=JwgeECkckRo&t=0s)
 - Remove: [Deletion for Red-Black Trees ( incl. Examples ) - Data Structures - YouTube](https://www.youtube.com/watch?v=_c30ot0Kcis)
