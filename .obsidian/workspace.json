@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "comp251/Part 1/4-nodes.md",
+                "file": "comp251/Part 1/7-avl.md",
                 "mode": "source",
                 "source": false
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "comp251/Part 1/4-nodes.md"
+                "file": "comp251/Part 1/7-avl.md"
               }
             }
           },
@@ -127,7 +127,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "comp251/Part 1/4-nodes.md",
+                "file": "comp251/Part 1/7-avl.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -144,7 +144,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "comp251/Part 1/4-nodes.md",
+                "file": "comp251/Part 1/7-avl.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -173,7 +173,13 @@
   "active": "376613423db7dbc5",
   "lastOpenFiles": [
     "comp251/final exam topics.md",
+    "comp251/Part 1/7-avl.md",
+    "comp251/Part 1/6-bst.md",
+    "comp251/Part 1/5-heaps.md",
+    "img/Pasted image 20230421171542.png",
     "comp251/Part 1/4-nodes.md",
+    "img/Pasted image 20230421164309.png",
+    "img/Pasted image 20230421162632.png",
     "comp251/Part 1/3-hashing.md",
     "comp251/Part 1/2-time-complexity.md",
     "comp251/Part 1/1-intro.md",
@@ -196,9 +202,6 @@
     "comp251/Graph Algos/Shortest Path.md",
     "comp251/Part 1/8-union-find.md",
     "img/Pasted image 20230419191041.png",
-    "img/Pasted image 20230419184900.png",
-    "img/Pasted image 20230419161203.png",
-    "img/Pasted image 20230419161133.png",
     "README.md",
     "lab4 questions.md",
     "comp251/Graph Algos",
@@ -207,9 +210,6 @@
     "comp303/midterm review.md",
     "comp303/m8-inversion-of-control/Observer Design Pattern.md",
     "comp303/m8-inversion-of-control/Inversion of Control.md",
-    "comp303/m8-inversion-of-control/GUI Development Intro.md",
-    "comp303/m7-inheritance/Template Method Design Pattern.md",
-    "ot.md",
     "comp303/m9",
     "comp251/Graph Algos",
     "comp303/m8-inversion-of-control",
