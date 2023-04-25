@@ -36,6 +36,8 @@ While true {
 ### Better Algorithm- The Ford-Fulkerson Method
 - Start with initial flow value of 0 for all edges. 
 - Residual capacity = remaining capacity. Each edge has a residual capacity `c_f(u,v) = c(u,v) - f(u,v)`. 
+	- `c(u,v)` is the capacity of the edge
+	- `f(u,v)` is the current flow
 
 - Residual graph `G_f` is composed of the edges that have non-zero residual capacity. 
 	- The residual graph may also have reverse edges that are not present in `G`, which is equivalent to decreasing the flow on a particular edge. 

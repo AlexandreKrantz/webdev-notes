@@ -1,5 +1,4 @@
-Non linear data structures: 
-
+### Data Structures Intro
 - Abstract data type (list, stack, queue)
 - Data structure (array, heap, hash tables) = a way to insert and organize data; supports efficient insertions, queries, searches, updates, and delete.
 	- linear data structure = array, linked list

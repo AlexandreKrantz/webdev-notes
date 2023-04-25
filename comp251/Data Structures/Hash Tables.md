@@ -25,7 +25,7 @@ We want to retain the average case O(1) while not using too much space.
 	- choose d carefully! If d is a power of two and the keys are even, then the odd slots are never used.
 	- Rule of thumb: choose d prime and not too close to a power of 2. 
 	- Simple method to implement, but you must be careful about choice of d. 
-- **Multiplication method**: `h(k) = [m(kA * mod(1)]`
+- **Multiplication method**: `h(k) = [m((k*A) % 1]`
 	- `A` is a constant between 0 and 1. 
 	- `[]` is the floor function, rounding down to the nearest integer. 
 	- `m` is the size of the hash table. 
@@ -48,7 +48,7 @@ We want to retain the average case O(1) while not using too much space.
 - **load factor**: a=n/m <-- assumes elements are distributed uniformly among m slots. 
 - average case analysis: expected time of a search is O(a + 1)
 	- a is the traversal time of the average length of the lists, which turns out to be equal to the load factor. 
-- successful search: the probability that a list is searched is proportional to the number of element it contians. 
+- successful search: the probability that a list is searched is proportional to the number of element it contains. 
 
 #### Open addressing 
 - Maximum 1 key/value stored per slot (no chaining)
@@ -61,7 +61,9 @@ We want to retain the average case O(1) while not using too much space.
 - To avoid primary clusters, we can do ***quadratic probing***. However, the issue is still there to a lesser degree. `h(k,i) = (h'(k) + i*c1 + i^2*c2) mod m`
 - Even better is ***double hashing***  `h(k,i) = (h1(k) + i*h2(k)) mod m`
 	- The first hash function is used to compute the initial hash value, and the second hash function is used to compute the step size for the probing sequence.
-- Thm1. Expected num of probes in an unseccesssful search is at most `1/1-a`
+
+*Average case analysis:* (remember, time complexity is always O(1))
+- Thm1. Expected num of probes in an unseccesssful search is at most `1/1-a` (decreasing => O(1))
 - Thm2. Expected num of probes in successful search is at most `1/a * log(1/(1-a))*`
 	- **Unsuccessful search** = searching for an element that is ***not*** in the hash table
 	- **Successful search** = searching for an element that is in the hash table

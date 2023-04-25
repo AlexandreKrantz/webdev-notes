@@ -4,5 +4,6 @@
   "promptDelete": false,
   "attachmentFolderPath": "img",
   "alwaysUpdateLinks": true,
-  "showInlineTitle": false
+  "showInlineTitle": false,
+  "spellcheck": false
 }

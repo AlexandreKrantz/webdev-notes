@@ -1,3 +1,4 @@
+# Single Source Shortest Path
 ## Problem Setup
 *Input:*
 - Directed graph G(V, E)
@@ -12,7 +13,7 @@
 - Single-destination: Find shortest paths to a given destination vertex.
 	- By reversing the direction of each edge in the graph, you reduce it to SSSP.
 - Single-pair: Find shortest path from u to v.
-- All-pairs: Find shortest path from u to v for all u, v ∈ V .
+- All-pairs: Find shortest path from u to v for all u, v ∈ V.
 	- Can be solved by running SSSP from every vertex. 
 
 *Note:*

@@ -14,6 +14,7 @@
 - Search: same as reg bst
 - Insert: [Insertion for Red-Black Trees ( incl. Examples ) - Data Structures - YouTube](https://www.youtube.com/watch?v=JwgeECkckRo&t=0s)
 - Remove: [Deletion for Red-Black Trees ( incl. Examples ) - Data Structures - YouTube](https://www.youtube.com/watch?v=_c30ot0Kcis)
+![[Pasted image 20230422211259.png]]
 
 Note:
 - Nodes require one storage bit to keep track of color

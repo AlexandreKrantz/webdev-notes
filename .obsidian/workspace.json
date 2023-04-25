@@ -6,15 +6,15 @@
       {
         "id": "c8179fed9fd4d51a",
         "type": "tabs",
-        "dimension": 61.24595469255664,
+        "dimension": 48.455598455598455,
         "children": [
           {
-            "id": "8750a64cf1bc844e",
+            "id": "36f07396b3c6a3e0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "comp251/Algorithm Design/Algorithm Paradigms.md",
+                "file": "comp251/Graph Algos/Bipartite Graphs.md",
                 "mode": "source",
                 "source": false
               }
@@ -25,7 +25,7 @@
       {
         "id": "03a7c38ff387f5ae",
         "type": "tabs",
-        "dimension": 38.75404530744336,
+        "dimension": 51.54440154440154,
         "children": [
           {
             "id": "88b436774f2ee248",
@@ -116,7 +116,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "comp251/final exam topics.md"
+                "file": "comp251/Graph Algos/Bipartite Graphs.md"
               }
             }
           },
@@ -126,7 +126,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "comp251/final exam topics.md",
+                "file": "comp251/Graph Algos/Bipartite Graphs.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -143,7 +143,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "comp251/final exam topics.md",
+                "file": "comp251/Graph Algos/Bipartite Graphs.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -169,43 +169,44 @@
       "oz-clear-unused-images:Clear Unused Images": false
     }
   },
-  "active": "88b436774f2ee248",
+  "active": "36f07396b3c6a3e0",
   "lastOpenFiles": [
-    "comp251/Algorithm Design/Algorithm Paradigms.md",
+    "comp251/Graph Algos/SS Shortest Path.md",
     "comp251/final exam topics.md",
+    "comp251/Graph Algos/Search and Sort.md",
     "comp251/Algorithm Design/Dynamic Programming.md",
-    "comp251/Algorithm Design/2-time-complexity.md",
-    "comp251/Data Structures/1-course-intro.md",
+    "comp251/Graph Algos/Flow Networks.md",
+    "comp251/Graph Algos/Graphs.md",
+    "comp251/Graph Algos/Bipartite Graphs.md",
+    "comp251/Algorithm Design/Complete Search.md",
+    "comp251/Algorithm Design/Divide and Conquer.md",
+    "comp251/Data Structures/Red-Black Trees.md",
+    "img/Pasted image 20230422211259.png",
+    "img/Pasted image 20230422211219.png",
+    "comp251/Data Structures/AVL Trees.md",
+    "comp251/Data Structures/Binary Search Trees.md",
+    "comp251/Data Structures/Heaps.md",
+    "comp251/Data Structures/Union-Find.md",
+    "comp251/Data Structures/Intro.md",
+    "comp251/Data Structures/Hash Tables.md",
+    "comp251/Algorithm Design/Recurrences.md",
     "comp251/Data Structures/8-union-find.md",
-    "comp251/Data Structures/4-union-find.md",
-    "comp251/Data Structures/3-hashing.md",
     "img/Pasted image 20230422155115.png",
     "img/Pasted image 20230422153839.png",
     "comp303/final exam review.md",
     "comp251/A.md",
     "Untitled.md",
-    "comp251/Graph Algos/Graphs.md",
     "comp251/Algorithm Design/Randomized Algorithms.md",
     "comp251/Algorithm Design/Amortized Analysis.md",
     "comp251/Algorithm Design",
-    "comp251/Data Structures/7-red-black.md",
-    "comp251/Data Structures/7-avl.md",
-    "comp251/Data Structures/6-bst.md",
-    "comp251/Data Structures/5-heaps.md",
     "img/Pasted image 20230421171542.png",
     "img/Pasted image 20230421164309.png",
     "img/Pasted image 20230421162632.png",
     "img/Pasted image 20230421112644.png",
     "img/Pasted image 20230421112412.png",
     "img/Pasted image 20230421112353.png",
-    "img/Pasted image 20230419231311.png",
     "comp251/Extras",
-    "img/Pasted image 20230419215949.png",
-    "comp251/Graph Algos/Bipartite Graphs.md",
-    "comp251/Graph Algos/Flow Networks.md",
     "comp251/Graph Algos/Minimum Spanning Tree.md",
-    "comp251/Graph Algos/Search and Sort.md",
-    "comp251/Graph Algos/Shortest Path.md",
     "README.md",
     "lab4 questions.md",
     "comp251/Graph Algos",

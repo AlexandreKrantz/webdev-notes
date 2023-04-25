@@ -11,7 +11,7 @@
 [Heap - Max Heapify - YouTube](https://www.youtube.com/watch?v=5iBUTMWGtIQ)
 - Insert the new node as you would for a complete binary tree. 
 - When you insert a new node, it may violate the conditions of a heap. 
-	- **For each mini subtree, swap the larger of the two child nodes with its parent.**
+	- For each mini subtree, swap the ***larger*** of the two child nodes with its parent.
 	- This method is called `MaxHeapify`
 	- Worst case runtime: `O(log(n))` , where `n` is the size of the largest subtree. 
 

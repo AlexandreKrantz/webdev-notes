@@ -75,7 +75,7 @@ while stack is not empty
 			push(w)
 ```
 
-#### Classification of Edges
+#### Classification of Edges - DFS
 - An edge (u,v) is a *tree edge* if it was used to discover v. 
 - (u,v) is a *back edge* if u is a descendant of v (includes self loops). 
 - (u,v) is a *forward edge* if v is a descendant of u, but not a tree edge (ie. it was already discovered via a different edge). 
@@ -123,7 +123,7 @@ Runtime is O(V+E) because it's the same as DFS.
 	- Many algorithms that work with directed graphs do this decomposition and then run on each component separately.
 
 Formal definition: 
-- A strongly connected component of G is a maximal subset of vertices C in V such that for all u,v in C, both u -> v and v -> u exist.
+- A strongly connected component of G is a maximal subset of vertices C in V such that for all u,v in C, paths u -> v and v -> u both exist.
 
 - $G^T$ is the transpose of $G$, defined as the graph you get when you reverse the directions of all the edges. 
 	- Both $G$ and $G^T$ have the same stronly connected components. 

@@ -1,14 +1,3 @@
-Estimate the runtime of a recursive algorithm: 
-
-if you decrease the size of the problem linearly with each recursive call, then the time complexity is `T(n) = T(n/2) + C`, where `C` is the constant time taken for the base case. 
-
-Solve the recurrence:
-- we deal with 3 different methods
-	1. Guess the solution using skills and talent 
-	2. Use induction to show that the solution works
-		1. Get in the building
-		2. Go up the stairs
-		3. Don't lose the context
 For practice, check out Langer's exercises: [Michael Langer (mcgill.ca)](https://www.cim.mcgill.ca/~langer/250.html)
 [E13-recurrences.pdf (mcgill.ca)](https://www.cim.mcgill.ca/~langer/250/E13-recurrences.pdf)
 

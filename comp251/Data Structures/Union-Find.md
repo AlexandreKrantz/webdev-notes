@@ -38,7 +38,7 @@ Basically like a set of equivalence classes. Each equivalence class is a set, wi
 ##### Path Compression
 - When we do the `find` operation, it would be better if every node in the tree pointed to the root. This way we don't spend time traversing the "find path". 
 ![[Pasted image 20230421164309.png]]
-[you get near-constant time?]
+[you get near-constant time for find?]
 
 ```
 find(i) { 
